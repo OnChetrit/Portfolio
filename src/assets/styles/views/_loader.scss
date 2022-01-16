@@ -1,0 +1,15 @@
+.loader {
+  height: 100%;
+  background: radial-gradient(circle, $clr1 var(--pos, 0%), #fff 0);
+  animation: a 0s 1;
+  animation-name: pos;
+  animation-duration: 2 * 2s, 2s;
+  animation-timing-function: steps(1), ease-in-out;
+}
+
+@keyframes pos {
+  90%,
+  100% {
+    --pos: 100%;
+  }
+}

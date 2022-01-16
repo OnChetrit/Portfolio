@@ -1,0 +1,11 @@
+.app {
+  main {
+    // display: inline-flex;
+    overflow-x: scroll;
+
+    > section {
+      width: 100vw;
+      height: calc(100vh - 74px);
+    }
+  }
+}

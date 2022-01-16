@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: plex-regular;
+  scroll-behavior: smooth;
+  color: $clr2;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: $clr1;
+}
+
+img {
+  width: 100%;
+}
+
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  line-height: 1;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: plex-regular;
+  cursor: pointer;
+  padding: 0;
+}
+
+textarea,
+input {
+  outline: none;
+  border: none;
+  resize: none;
+  max-height: 80px;
+  font-family: plex-regular;
+}
+
+::-moz-selection {
+  color: $clr1;
+  background: $clr2;
+}
+::selection {
+  color: $clr1;
+  background: $clr2;
+}

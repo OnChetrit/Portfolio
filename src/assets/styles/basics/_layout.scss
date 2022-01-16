@@ -1,0 +1,16 @@
+.main-container {
+  margin: 0 auto;
+  width: 100%;
+
+  @mixin for-normal-layout {
+    @media (min-width: $narrow-breakpoint) {
+      width: 760px;
+    }
+  }
+
+  @include for-wide-layout {
+    @media (min-width: $normal-breakpoint) {
+      width: 960px;
+    }
+  }
+}

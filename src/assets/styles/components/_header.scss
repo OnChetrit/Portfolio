@@ -1,0 +1,20 @@
+header {
+  height: 74px;
+  border-bottom: 2px solid $clr2;
+  font-size: rem(18px);
+  width: 100vw;
+  background: $clr1;
+
+  span {
+    font-family: plex-semibold;
+  }
+
+  nav {
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .nav {
+      gap: 80px;
+    }
+  }
+}
