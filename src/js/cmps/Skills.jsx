@@ -3,7 +3,6 @@ import Slider from 'react-slick';
 import { ReactComponent as Responsive } from '../../assets/img/skills/cross-platform.svg';
 import { ReactComponent as Css } from '../../assets/img/skills/css.svg';
 import { ReactComponent as Expressjs } from '../../assets/img/skills/expressjs.svg';
-import { ReactComponent as Git } from '../../assets/img/skills/git.svg';
 import { ReactComponent as Html } from '../../assets/img/skills/html5.svg';
 import { ReactComponent as Js } from '../../assets/img/skills/javascript.svg';
 import { ReactComponent as Jquery } from '../../assets/img/skills/jquery.svg';
@@ -28,7 +27,6 @@ export const Skills = () => {
       <Slider {...settings}>
         <Responsive />
         <Expressjs />
-        <Git />
         <Html />
         <Js />
         <Jquery />
