@@ -28,11 +28,42 @@
   }
 
   .actions {
+
+    .mas {
+      position: absolute;
+      color: $clr1;
+      text-align: center;
+      width: 101%;
+      // font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      position: absolute;
+      // font-size: 11px;
+      // margin-top: 17px;
+      overflow: hidden;
+      font-weight: bold;
+  }
+  
     .contact {
       height: 47px;
       width: 156px;
       border: 1px solid $clr2;
       border-radius: 33px;
+      background: $clr1;
+      -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+      mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+      -webkit-mask-size: 7100% 100%;
+      mask-size: 7100% 100%;
+      //  border: none;
+      color: $clr2;
+
+      cursor: pointer;
+      -webkit-animation: ani2 0.7s steps(70) forwards;
+      animation: ani2 0.7s steps(70) forwards;
+
+      &:hover {
+        -webkit-animation: ani 0.7s steps(70) forwards;
+        animation: ani 0.7s steps(70) forwards;
+      }
     }
 
     .cv {

@@ -20,7 +20,10 @@ export const About = () => {
           solving. self-learner and adapt quickly to new environments.
         </p>
         <div className="actions flex space-between">
+          <div className="container-button">
+<span className="mas">Contact Me</span>
           <button className="contact">Contact Me</button>
+          </div>
           <button className="cv">Download CV</button>
         </div>
       </div>

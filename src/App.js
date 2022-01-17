@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="app flex column auto-center">
       <Header />
-      <main className="flex">
+      <main className="flex column">
         <About />
         {/* <Skills /> */}
         <ProjectList />
