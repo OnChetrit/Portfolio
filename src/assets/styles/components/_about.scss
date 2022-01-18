@@ -1,9 +1,10 @@
 .about {
-  padding: 0 20px;
+  padding: 0 25px;
   width: 100vw;
+  margin-bottom: 100px;
   flex-direction: column;
 
-  @mixin for-normal-layout {
+  @include for-normal-layout {
     @media (min-width: $narrow-breakpoint) {
       flex-direction: row;
     }
@@ -12,21 +13,19 @@
   h3 {
     font-size: rem(18px);
     margin-bottom: 9px;
-    margin-top: 32px;
   }
 
   h1 {
     font-family: plex-semibold;
     // font-size: rem(28px);
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(rem(32px), 5vw, rem(80px));
     margin-bottom: 32px;
     line-height: 1;
   }
 
   p {
-    // font-size: rem(20px);
+    font-size: rem(14px);
     margin-bottom: 32px;
-    width: 360px;
   }
 
   button {
@@ -35,7 +34,9 @@
   }
 
   .actions {
-    gap: 40px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
     .container-button {
       position: relative;
 
@@ -48,9 +49,6 @@
         color: $clr1;
         background: $clr2;
         border-radius: 33px;
-        // font-family: 'Lato', sans-serif;
-        // font-size: 11px;
-        // margin-top: 17px;
         overflow: hidden;
       }
 
@@ -107,7 +105,7 @@
       z-index: 5;
 
       .text {
-        font-family: plex-regular;
+        font-family: plex-semibold;
         position: absolute;
         width: 100%;
         height: 100%;

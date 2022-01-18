@@ -1,9 +1,8 @@
 // import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { ReactComponent as BurgerMenu } from '../../assets/img/burger-menu.svg';
 
-export const Menu = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+export const Menu = ({ setMenuOpen, menuOpen }) => {
+  // const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div

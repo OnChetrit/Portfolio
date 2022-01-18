@@ -26,7 +26,7 @@ export const ProjectList = () => {
 
   return (
     <>
-      {projects.reverse().map((project) => {
+      {projects.map((project) => {
         return (
           <section key={project.title} className="project">
             <h5>{project.genre}</h5>
@@ -38,8 +38,12 @@ export const ProjectList = () => {
               })}
             </div>
             <div className="project-actions">
-              <Link to={{pathname: project.urlLive}} target="_blank">View Site</Link>
-              <Link to={{pathname: project.urlGithub}} target="_blank">Repo</Link>
+              <Link to={{ pathname: project.urlLive }} target="_blank">
+                View Site
+              </Link>
+              <Link to={{ pathname: project.urlGithub }} target="_blank">
+                Repo
+              </Link>
             </div>
             <div className="thumbnail">
               <img src={renderImg(project.thumbnails)} alt="" srcset="" />

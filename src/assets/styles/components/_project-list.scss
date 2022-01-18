@@ -1,9 +1,17 @@
 .project {
-  height: 100vh;
   padding: 20px;
 
   h5 {
     text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  h2 {
+    font-family: plex-bold;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: rem(14px);
   }
 
   .thumbnail {
