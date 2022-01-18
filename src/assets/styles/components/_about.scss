@@ -1,6 +1,13 @@
 .about {
   padding: 0 20px;
   width: 100vw;
+  flex-direction: column;
+
+  @mixin for-normal-layout {
+    @media (min-width: $narrow-breakpoint) {
+      flex-direction: row;
+    }
+  }
 
   h3 {
     font-size: rem(18px);

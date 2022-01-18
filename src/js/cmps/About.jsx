@@ -4,7 +4,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="about flex column justify-center main-container"
+      className="about flex justify-center main-container"
     >
       <div className="left">
         <h3>Hi! I'm On Chetrit</h3>

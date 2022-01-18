@@ -38,8 +38,8 @@ export const ProjectList = () => {
               })}
             </div>
             <div className="project-actions">
-              <Link to={project.urlLive}>View Site</Link>
-              <Link to={project.urlGithub}>Repo</Link>
+              <Link to={{pathname: project.urlLive}} target="_blank">View Site</Link>
+              <Link to={{pathname: project.urlGithub}} target="_blank">Repo</Link>
             </div>
             <div className="thumbnail">
               <img src={renderImg(project.thumbnails)} alt="" srcset="" />
