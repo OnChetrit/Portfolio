@@ -26,31 +26,43 @@ export const ProjectList = () => {
 
   return (
     <>
-      {projects.map((project) => {
-        return (
-          <section key={project.title} className="project">
-            <h5>{project.genre}</h5>
-            <h2>{project.title}</h2>
-            <p>{project.desc}</p>
-            <div className="skills-used">
-              {project.madeWith.map((skill) => {
-                <SVG key={skill} skill={skill} />;
-              })}
-            </div>
-            <div className="project-actions">
-              <Link to={{ pathname: project.urlLive }} target="_blank">
-                View Site
-              </Link>
-              <Link to={{ pathname: project.urlGithub }} target="_blank">
-                Repo
-              </Link>
-            </div>
-            <div className="thumbnail">
-              <img src={renderImg(project.thumbnails)} alt="" srcset="" />
-            </div>
-          </section>
-        );
-      })}
+      {projects.map(
+        ({ title, genre, desc, madeWith, urlLive, urlGithub, thumbnails }) => {
+          return (
+            <section key={title} className="project flex main-container">
+              <div className="project-info flex column">
+                <h5>{genre}</h5>
+                <h2>{title}</h2>
+                <p>{desc}</p>
+                <div className="skills-used">
+                  {madeWith.map((skill) => {
+                    <SVG key={skill} skill={skill} />;
+                  })}
+                </div>
+                <div className="project-actions flex space-between">
+                  <Link
+                    to={{ pathname: urlLive }}
+                    className="ul"
+                    target="_blank"
+                  >
+                    View Site
+                  </Link>
+                  <Link
+                    to={{ pathname: urlGithub }}
+                    className="ul"
+                    target="_blank"
+                  >
+                    Repo
+                  </Link>
+                </div>
+              </div>
+              <div className="thumbnail">
+                <img src={renderImg(thumbnails)} alt="" srcset="" />
+              </div>
+            </section>
+          );
+        }
+      )}
     </>
   );
 };

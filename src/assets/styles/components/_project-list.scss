@@ -1,19 +1,39 @@
 .project {
   padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
 
-  h5 {
-    text-transform: uppercase;
-    margin-bottom: 5px;
-  }
-  h2 {
-    font-family: plex-bold;
-    margin-bottom: 20px;
+  @include for-normal-layout {
+    @media (min-width: $narrow-breakpoint) {
+      flex-direction: row;
+    }
   }
 
-  p {
-    font-size: rem(14px);
+  .project-info {
+    flex: 1;
+
+    h5 {
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    h2 {
+      font-family: plex-bold;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: rem(14px);
+      margin-bottom: 20px;
+      flex: 1;
+    }
+    .project-actions {
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
   }
 
   .thumbnail {
+    flex-basis: 50%;
   }
 }

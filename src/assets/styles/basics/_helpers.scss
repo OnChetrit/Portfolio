@@ -12,6 +12,11 @@
   cursor: pointer;
 }
 
+.ul {
+  text-decoration: underline 2px solid $clr2;
+  text-underline-offset: 5px;
+}
+
 // Font Sizes
 .fs12 {
   font-size: rem(12px);
