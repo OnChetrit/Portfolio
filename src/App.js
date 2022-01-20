@@ -21,7 +21,7 @@ function App() {
         {/* <Contact /> */}
       </main>
       <div className={`modal ${menuOpen ? 'open' : ''}`}>
-        <MenuModal setMenuOpen={setMenuOpen} />
+        <MenuModal setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
       </div>
     </div>
   );

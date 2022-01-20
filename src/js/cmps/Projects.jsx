@@ -33,10 +33,14 @@ export const ProjectList = () => {
               <div className="project-info flex column">
                 <h5>{genre}</h5>
                 <h2>{title}</h2>
-                <p>{desc}</p>
-                <div className="skills-used">
+                <div className="desc">
+                  {desc.map((p) => {
+                    return <p>{p}</p>;
+                  })}
+                </div>
+                <div className="skills-used flex">
                   {madeWith.map((skill) => {
-                    <SVG key={skill} skill={skill} />;
+                    return <SVG key={skill} skill={skill} />;
                   })}
                 </div>
                 <div className="project-actions flex space-between">
@@ -57,7 +61,7 @@ export const ProjectList = () => {
                 </div>
               </div>
               <div className="thumbnail">
-                <img src={renderImg(thumbnails)} alt="" srcset="" />
+                <img src={renderImg(thumbnails)} alt="" srcSet="" />
               </div>
             </section>
           );

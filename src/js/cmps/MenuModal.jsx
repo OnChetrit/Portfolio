@@ -1,21 +1,21 @@
 import { Link } from 'react-scroll';
 // import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-export const MenuModal = ({ setMenuOpen }) => {
-  const links = ["about", "skills", "projects", "contact"];
+export const MenuModal = ({ setMenuOpen, menuOpen }) => {
+  const links = ['about', 'skills', 'projects', 'contact'];
 
   const sideVariants = {
     closed: {
       transition: {
-        x: -800
-      }
+        x: -800,
+      },
     },
     open: {
       transition: {
-        x: 0
-      }
-    }
+        x: 0,
+      },
+    },
   };
 
   return (
@@ -25,15 +25,15 @@ export const MenuModal = ({ setMenuOpen }) => {
           <motion.a
             to={link}
             key={link}
-            smooth={true}
             duration={1400}
             variants={sideVariants}
             initial="closed"
             animate="open"
             transition={{
-              type: "spring",
-              stiffness: 260
+              type: 'spring',
+              stiffness: 260,
             }}
+            onClick={() => setMenuOpen(!menuOpen)}
           >
             {link}
           </motion.a>

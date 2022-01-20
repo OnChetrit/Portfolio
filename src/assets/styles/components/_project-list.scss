@@ -22,11 +22,20 @@
       margin-bottom: 20px;
     }
 
-    p {
+    .desc {
       font-size: rem(14px);
-      margin-bottom: 20px;
       flex: 1;
     }
+
+    .skills-used {
+      gap: 25px;
+      margin: 20px 0;
+
+      svg {
+        height: 40px;
+      }
+    }
+
     .project-actions {
       max-width: 300px;
       margin-bottom: 20px;
