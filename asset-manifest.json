@@ -1,19 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.81b16ee7.chunk.css",
-    "main.js": "/portfolio/static/js/main.f55f56fc.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.f55f56fc.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.085e279d.chunk.css",
+    "main.js": "/portfolio/static/js/main.ef07ba57.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.ef07ba57.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.0bf68c44.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.0bf68c44.js.map",
-    "static/css/2.ba69f5a0.chunk.css": "/portfolio/static/css/2.ba69f5a0.chunk.css",
-    "static/js/2.ddea34a2.chunk.js": "/portfolio/static/js/2.ddea34a2.chunk.js",
-    "static/js/2.ddea34a2.chunk.js.map": "/portfolio/static/js/2.ddea34a2.chunk.js.map",
+    "static/js/2.ad9b6281.chunk.js": "/portfolio/static/js/2.ad9b6281.chunk.js",
+    "static/js/2.ad9b6281.chunk.js.map": "/portfolio/static/js/2.ad9b6281.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/2.ba69f5a0.chunk.css.map": "/portfolio/static/css/2.ba69f5a0.chunk.css.map",
-    "static/css/main.81b16ee7.chunk.css.map": "/portfolio/static/css/main.81b16ee7.chunk.css.map",
-    "static/js/2.ddea34a2.chunk.js.LICENSE.txt": "/portfolio/static/js/2.ddea34a2.chunk.js.LICENSE.txt",
+    "static/css/main.085e279d.chunk.css.map": "/portfolio/static/css/main.085e279d.chunk.css.map",
+    "static/js/2.ad9b6281.chunk.js.LICENSE.txt": "/portfolio/static/js/2.ad9b6281.chunk.js.LICENSE.txt",
     "static/media/Appsus.ec521163.png": "/portfolio/static/media/Appsus.ec521163.png",
-    "static/media/styles.scss": "/portfolio/static/media/IBMPlexMono-SemiBold.cfeb8907.ttf",
+    "static/media/styles.scss": "/portfolio/static/media/Roboto-Thin.1711b41f.ttf",
     "static/media/MemeGenerator.c8a3a0f2.png": "/portfolio/static/media/MemeGenerator.c8a3a0f2.png",
     "static/media/Minesweeper.0b77ffbb.png": "/portfolio/static/media/Minesweeper.0b77ffbb.png",
     "static/media/TouchTheNumbers.83f51927.png": "/portfolio/static/media/TouchTheNumbers.83f51927.png",
@@ -31,14 +29,12 @@
     "static/media/on.01b04756.png": "/portfolio/static/media/on.01b04756.png",
     "static/media/react-js.d9abd902.svg": "/portfolio/static/media/react-js.d9abd902.svg",
     "static/media/rest-api.f1def7dd.svg": "/portfolio/static/media/rest-api.f1def7dd.svg",
-    "static/media/sass.58b7b983.svg": "/portfolio/static/media/sass.58b7b983.svg",
-    "static/media/slick-theme.css": "/portfolio/static/media/slick.c94f7671.ttf"
+    "static/media/sass.58b7b983.svg": "/portfolio/static/media/sass.58b7b983.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0bf68c44.js",
-    "static/css/2.ba69f5a0.chunk.css",
-    "static/js/2.ddea34a2.chunk.js",
-    "static/css/main.81b16ee7.chunk.css",
-    "static/js/main.f55f56fc.chunk.js"
+    "static/js/2.ad9b6281.chunk.js",
+    "static/css/main.085e279d.chunk.css",
+    "static/js/main.ef07ba57.chunk.js"
   ]
 }
