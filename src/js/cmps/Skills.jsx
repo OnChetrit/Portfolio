@@ -1,4 +1,4 @@
-import Slider from 'react-slick';
+import InfiniteCarousel from 'react-leaf-carousel';
 
 import { ReactComponent as Responsive } from '../../assets/img/skills/cross-platform.svg';
 import { ReactComponent as Css } from '../../assets/img/skills/css.svg';
@@ -15,28 +15,53 @@ import { ReactComponent as Heroku } from '../../assets/img/skills/heroku.svg';
 
 export const Skills = () => {
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    animationDuration: 1000,
+    autoCycle: true,
+    cycleInterval: 1000,
+    slidesToScroll: 4,
+    slidesToShow: 4,
   };
 
   return (
-    <div id="skills" className="">
-      <Slider {...settings}>
-        <Responsive />
-        <Expressjs />
-        <Html />
-        <Js />
-        <Jquery />
-        <Mongodb />
-        <Nodejs />
-        <Reactjs />
-        <RestApi />
-        <Sass />
-        <Heroku />
-      </Slider>
+    <div id="skills" className="main-container flex">
+      <InfiniteCarousel {...settings}>
+        <div className="skill-container">
+          <Css />
+        </div>
+        <div className="skill-container">
+          <Responsive />
+        </div>
+        <div className="skill-container">
+          <Expressjs />
+        </div>
+        <div className="skill-container">
+          <Html />
+        </div>
+        <div className="skill-container">
+          <Js />
+        </div>
+        <div className="skill-container">
+          <Jquery />
+        </div>
+        <div className="skill-container">
+          <Mongodb />
+        </div>
+        <div className="skill-container">
+          <Nodejs />
+        </div>
+        <div className="skill-container">
+          <Reactjs />
+        </div>
+        <div className="skill-container">
+          <RestApi />
+        </div>
+        <div className="skill-container">
+          <Sass />
+        </div>
+        <div className="skill-container">
+          <Heroku />
+        </div>
+      </InfiniteCarousel>
     </div>
   );
 };

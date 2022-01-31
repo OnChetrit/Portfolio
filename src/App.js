@@ -2,14 +2,16 @@ import { useState } from 'react';
 
 import { Header } from "./js/cmps/Header";
 import { About } from "./js/cmps/About";
-import { Skills } from "./js/cmps/Skills";
+// import { Skills } from "./js/cmps/Skills";
 import { ProjectList } from "./js/cmps/Projects";
 import { Contact } from "./js/cmps/Contact";
 import { MenuModal } from './js/cmps/MenuModal';
+import { useWindowSize } from './js/cmps/hooks/useWindowSize';
 
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const size = useWindowSize();
 
   return (
     <div className="app flex column auto-center">
@@ -18,11 +20,11 @@ function App() {
         <About />
         {/* <Skills /> */}
         <ProjectList />
-        {/* <Contact /> */}
+        <Contact />
       </main>
-      <div className={`modal ${menuOpen ? 'open' : ''}`}>
+      {size.width < 760 && <div className={`modal ${menuOpen ? 'open' : ''}`}>
         <MenuModal setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
-      </div>
+      </div>}
     </div>
   );
 }

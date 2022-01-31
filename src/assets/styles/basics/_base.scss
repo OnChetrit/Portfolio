@@ -3,15 +3,18 @@
 }
 
 html {
-  font-family: plex-regular;
+  font-family: $font-r;
   scroll-behavior: smooth;
   color: $clr2;
+  // overflow-y: scroll;
+  // width: 100vw;
 }
 
 body {
   margin: 0;
   height: 100vh;
   background-color: $clr1;
+  overflow-x: hidden;
 }
 
 img {
@@ -41,18 +44,19 @@ button {
   border: none;
   outline: none;
   background: transparent;
-  font-family: plex-regular;
+  font-family: $font-r;
   cursor: pointer;
   padding: 0;
 }
 
 textarea,
 input {
+  background: inherit;
   outline: none;
   border: none;
   resize: none;
   max-height: 80px;
-  font-family: plex-regular;
+  font-family: $font-r;
 }
 
 ::-moz-selection {

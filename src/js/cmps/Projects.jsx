@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import Tilt from 'react-parallax-tilt';
+
 import { SVG } from './dynamic/SVG';
 import { projects } from '../services/project.service';
 
@@ -21,52 +23,71 @@ export const ProjectList = () => {
         return MemeGenerator;
       case 'Minesweeper':
         return Minesweeper;
+      default:
+        return;
     }
   };
 
   return (
     <>
-      {projects.map(
-        ({ title, genre, desc, madeWith, urlLive, urlGithub, thumbnails }) => {
-          return (
-            <section key={title} className="project flex main-container">
-              <div className="project-info flex column">
-                <h5>{genre}</h5>
-                <h2>{title}</h2>
-                <div className="desc">
-                  {desc.map((p) => {
-                    return <p>{p}</p>;
-                  })}
+      <div className="flex auto-center section-header">- Projects -</div>
+      <>
+        {projects.map(
+          ({
+            title,
+            genre,
+            desc,
+            madeWith,
+            urlLive,
+            urlGithub,
+            thumbnails,
+          }) => {
+            return (
+              <section key={title} className="project flex main-container">
+                <div className="project-info flex column">
+                  <h5>{genre}</h5>
+                  <h2>{title}</h2>
+                  <div className="desc">
+                    {desc.map((p) => {
+                      return <p key={p}>{p}</p>;
+                    })}
+                  </div>
+                  <div className="skills-used flex">
+                    {madeWith.map((skill) => {
+                      return (
+                        <Tilt perspective={500} scale={1.3}>
+                          <SVG key={skill} skill={skill} />
+                        </Tilt>
+                      );
+                    })}
+                  </div>
+                  <div className="project-actions flex space-between">
+                    <Link
+                      to={{ pathname: urlLive }}
+                      className="ul"
+                      target="_blank"
+                    >
+                      View Site
+                    </Link>
+                    <Link
+                      to={{ pathname: urlGithub }}
+                      className="ul"
+                      target="_blank"
+                    >
+                      Repo
+                    </Link>
+                  </div>
                 </div>
-                <div className="skills-used flex">
-                  {madeWith.map((skill) => {
-                    return <SVG key={skill} skill={skill} />;
-                  })}
+                <div className="thumbnail flex align-center">
+                  <Tilt perspective={2000}>
+                    <img src={renderImg(thumbnails)} alt="" srcSet="" />
+                  </Tilt>
                 </div>
-                <div className="project-actions flex space-between">
-                  <Link
-                    to={{ pathname: urlLive }}
-                    className="ul"
-                    target="_blank"
-                  >
-                    View Site
-                  </Link>
-                  <Link
-                    to={{ pathname: urlGithub }}
-                    className="ul"
-                    target="_blank"
-                  >
-                    Repo
-                  </Link>
-                </div>
-              </div>
-              <div className="thumbnail">
-                <img src={renderImg(thumbnails)} alt="" srcSet="" />
-              </div>
-            </section>
-          );
-        }
-      )}
+              </section>
+            );
+          }
+        )}
+      </>
     </>
   );
 };
