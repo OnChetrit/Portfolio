@@ -1,7 +1,10 @@
-import { Link } from 'react-scroll';
-import { Menu } from './Menu';
+import { Link } from "react-scroll";
+import { Menu } from "./Menu";
+
+import { projects } from "../services/project.service";
 
 export const Header = ({ setMenuOpen, menuOpen }) => {
+  const links = ["about", "projects", "contact"];
   return (
     <header className="flex">
       <nav className="flex align-center space-between main-container">
@@ -10,20 +13,39 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
           <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
         </div>
 
-        <div className="flex nav">
-          <Link to="about" smooth={true} duration={1400}>
-            About
-          </Link>
-          <Link to="skills" smooth={true} duration={1400}>
-            Skills
-          </Link>
-          <Link to="project" smooth={true} duration={1400}>
-            Projects
-          </Link>
-          <Link to="contact" smooth={true} duration={1400}>
-            Contact
-          </Link>
-        </div>
+        <ul className="flex nav">
+          <li className="tab">
+            <Link to="about" smooth={true} duration={1400}>
+              About
+            </Link>
+          </li>
+          <li className="tab">
+            <div className="projects flex align-center">
+              Projects
+             
+            </div>
+            <div className="dropdown-container">
+
+            <ul className="dropdown main-container flex">
+                {projects.map(({ title, thumbnails }) => {
+                  return (
+                    <li className="tab flex align-center">
+                      <Link to={thumbnails} smooth={true} duration={1400}>
+                        {title}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              </div>
+          </li>
+          <li className="tab">
+            <Link to="contact" smooth={true} duration={1400}>
+              Contact
+            </Link>
+          </li>
+        </ul>
+
       </nav>
     </header>
   );

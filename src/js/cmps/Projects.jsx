@@ -43,7 +43,7 @@ export const ProjectList = () => {
             thumbnails,
           }) => {
             return (
-              <section key={title} className="project flex main-container">
+              <section id={thumbnails} key={title} className="project flex main-container">
                 <div className="project-info flex column">
                   <h5>{genre}</h5>
                   <h2>{title}</h2>

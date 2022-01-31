@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 
 export const MenuModal = ({ setMenuOpen, menuOpen }) => {
-  const links = ['about', 'skills', 'projects', 'contact'];
+  const links = ['about', 'projects', 'contact'];
 
   const sideVariants = {
     closed: {
