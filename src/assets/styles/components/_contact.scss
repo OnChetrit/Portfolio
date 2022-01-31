@@ -1,0 +1,66 @@
+.contact {
+  background: $clr2;
+  width: 100vw;
+  height: 70vh;
+  color: $clr1;
+  padding: 50px 0;
+  position: relative;
+
+  ::-moz-selection {
+    color: $clr2;
+    background: $clr1;
+  }
+  ::selection {
+    color: $clr2;
+    background: $clr1;
+  }
+
+  .container {
+    position: fixed;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+
+    @include for-normal-layout {
+      @media (min-width: $narrow-breakpoint) {
+        flex-direction: row;
+      }
+    }
+
+    .info {
+    }
+
+    form {
+      gap: 20px;
+
+      input,
+      textarea {
+        padding: 10px;
+        color: $clr1;
+        border: 1px solid $clr1;
+        border-radius: 6px;
+
+        &::-webkit-input-placeholder {
+          color: $clr1;
+        }
+        /*firefox 19+ versions*/
+        &::-moz-placeholder {
+          color: $clr1;
+        }
+        /*IE  versions*/
+        &::-ms-placeholder {
+          color: $clr1;
+        }
+        /*Latest modern browsers */
+
+        &::placeholder {
+          color: $clr1;
+        }
+      }
+      button {
+        color: $clr1;
+      }
+    }
+  }
+}

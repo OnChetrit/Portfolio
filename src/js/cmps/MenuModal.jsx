@@ -22,10 +22,8 @@ export const MenuModal = ({ setMenuOpen, menuOpen }) => {
     <div className="menu-modal flex column align-center space-evenly">
       {links.map((link) => {
         return (
-          <motion.a
-            to={link}
+          <motion.div
             key={link}
-            duration={1400}
             variants={sideVariants}
             initial="closed"
             animate="open"
@@ -35,8 +33,10 @@ export const MenuModal = ({ setMenuOpen, menuOpen }) => {
             }}
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            {link}
-          </motion.a>
+            <Link to={link} duration={1400} smooth={true}>
+              {link}
+            </Link>
+          </motion.div>
         );
       })}
     </div>

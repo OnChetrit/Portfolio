@@ -1,5 +1,4 @@
 import { Link } from 'react-scroll';
-import { animateScroll as scroll } from 'react-scroll';
 import { Menu } from './Menu';
 
 export const Header = ({ setMenuOpen, menuOpen }) => {

@@ -5,8 +5,8 @@ export const projects = [
         urlLive: 'http://wednesday-app.herokuapp.com/',
         urlGithub: 'https://github.com/ronbuchris/wednesday',
         thumbnails: 'Wednesday',
-        desc: ['"Monday" clone, single page End-to-End application'],
-        madeWith: ['javascript', 'reactjs', 'sass', 'nodejs', 'mongodb',]
+        desc: ['"Monday" clone, single page End-to-End application', 'built over a span of two weeks and is based on the "Monday" platform.', 'allows real-time task management using WebSockets.'],
+        madeWith: ['reactjs', 'javascript', 'sass', 'nodejs', 'mongodb',]
     }, {
         title: 'AppSus',
         genre: 'Multi-App',

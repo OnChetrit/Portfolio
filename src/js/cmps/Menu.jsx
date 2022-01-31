@@ -1,9 +1,6 @@
 // import { motion } from 'framer-motion';
-import { useState } from 'react';
 
 export const Menu = ({ setMenuOpen, menuOpen }) => {
-  // const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <div
       className={`container-menu ${menuOpen ? 'active' : ''}`}

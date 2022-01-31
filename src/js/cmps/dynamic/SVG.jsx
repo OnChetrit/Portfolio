@@ -13,7 +13,6 @@ import { ReactComponent as Sass } from '../../../assets/img/skills/sass.svg';
 import { ReactComponent as Heroku } from '../../../assets/img/skills/heroku.svg';
 
 export const SVG = ({ skill }) => {
-  console.log(`skill`, skill);
   const renderSvg = (skill) => {
     switch (skill) {
       case 'javascript':
