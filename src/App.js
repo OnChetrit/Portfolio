@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 import { Header } from "./js/cmps/Header";
 import { About } from "./js/cmps/About";
@@ -22,9 +23,17 @@ function App() {
         <ProjectList />
         <Contact />
       </main>
-      {size.width < 760 && <div className={`modal ${menuOpen ? 'open' : ''}`}>
+      {/* {size.width < 760 && <div className={`modal ${menuOpen ? 'open' : ''}`}>
         <MenuModal setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
-      </div>}
+      </div>} */}
+
+      {size.width < 760 && <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {menuOpen && <MenuModal menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
+      </AnimatePresence>}
     </div>
   );
 }

@@ -4,9 +4,11 @@
   padding-bottom: 150px;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 100px;
 
   @include for-normal-layout {
     @media (min-width: $narrow-breakpoint) {
+      gap: 20px;
       flex-direction: row;
     }
   }

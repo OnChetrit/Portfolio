@@ -11,8 +11,8 @@ header {
   backdrop-filter: blur(5px);
   transition: height 0.5s ease-in-out;
 
+  font-family: $font-b;
   span {
-    font-family: $font-sb;
   }
 
   nav {
@@ -50,13 +50,12 @@ header {
           height: 100%;
 
           &:hover ~ header {
-              height: 200px;
-              
-              & ~ .dropdown-container {
-                display: block;
-              }
+            height: 200px;
+
+            & ~ .dropdown-container {
+              display: block;
             }
-          
+          }
         }
 
         .dropdown-container {
@@ -73,7 +72,6 @@ header {
           backdrop-filter: blur(5px);
 
           .dropdown {
-
             height: 100%;
             margin: 0 auto;
             padding: 0px 25px;

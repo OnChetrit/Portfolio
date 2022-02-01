@@ -1,10 +1,10 @@
-import { Link } from "react-scroll";
-import { Menu } from "./Menu";
+import { Link } from 'react-scroll';
+import { Menu } from './Menu';
 
-import { projects } from "../services/project.service";
+import { projects } from '../services/project.service';
 
 export const Header = ({ setMenuOpen, menuOpen }) => {
-  const links = ["about", "projects", "contact"];
+  const links = ['about', 'projects', 'contact'];
   return (
     <header className="flex">
       <nav className="flex align-center space-between main-container">
@@ -20,16 +20,12 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
             </Link>
           </li>
           <li className="tab">
-            <div className="projects flex align-center">
-              Projects
-             
-            </div>
+            <div className="projects flex align-center">Projects</div>
             <div className="dropdown-container">
-
-            <ul className="dropdown main-container flex">
+              <ul className="dropdown main-container flex">
                 {projects.map(({ title, thumbnails }) => {
                   return (
-                    <li className="tab flex align-center">
+                    <li className="tab flex align-center" key={title}>
                       <Link to={thumbnails} smooth={true} duration={1400}>
                         {title}
                       </Link>
@@ -37,7 +33,7 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
                   );
                 })}
               </ul>
-              </div>
+            </div>
           </li>
           <li className="tab">
             <Link to="contact" smooth={true} duration={1400}>
@@ -45,7 +41,6 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
             </Link>
           </li>
         </ul>
-
       </nav>
     </header>
   );

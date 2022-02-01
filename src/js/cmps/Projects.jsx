@@ -43,7 +43,11 @@ export const ProjectList = () => {
             thumbnails,
           }) => {
             return (
-              <section id={thumbnails} key={title} className="project flex main-container">
+              <section
+                id={thumbnails}
+                key={title}
+                className="project flex main-container"
+              >
                 <div className="project-info flex column">
                   <h5>{genre}</h5>
                   <h2>{title}</h2>
@@ -55,8 +59,8 @@ export const ProjectList = () => {
                   <div className="skills-used flex">
                     {madeWith.map((skill) => {
                       return (
-                        <Tilt perspective={500} scale={1.3}>
-                          <SVG key={skill} skill={skill} />
+                        <Tilt perspective={500} key={skill} scale={1.3}>
+                          <SVG skill={skill} />
                         </Tilt>
                       );
                     })}
@@ -79,7 +83,7 @@ export const ProjectList = () => {
                   </div>
                 </div>
                 <div className="thumbnail flex align-center">
-                  <Tilt perspective={2000}>
+                  <Tilt perspective={2000} transitionSpeed={3000}>
                     <img src={renderImg(thumbnails)} alt="" srcSet="" />
                   </Tilt>
                 </div>

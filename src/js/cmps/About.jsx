@@ -56,7 +56,12 @@ export const About = () => {
       </div>
       <div className="right flex auto-center">
         <div className="photo" variants={item}>
-          <Tilt trackOnWindow={true} tiltReverse={true} scale={1.05}>
+          <Tilt
+            trackOnWindow={true}
+            transitionSpeed={3000}
+            tiltReverse={true}
+            scale={1.05}
+          >
             <img src={on} alt="" />
             <div className="circle flex auto-center">
               <div className="logo"></div>
