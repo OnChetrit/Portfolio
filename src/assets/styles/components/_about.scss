@@ -17,7 +17,7 @@
     flex: 1;
 
     h3 {
-      font-size: rem(18px);
+      font-size: clamp(rem(24px), 2vw, rem(32px));
       margin-bottom: 9px;
     }
 

@@ -5,39 +5,42 @@ import Tilt from 'react-parallax-tilt';
 
 export const About = () => {
   const container = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0},
     show: {
       opacity: 1,
-      transition: {
-        delayChildren: 0.5,
-      },
+      transition: { staggerChildren: 0.1, delayChildren: 0.4 }
     },
   };
   const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
+    hidden: { opacity: 0,
+      y:'-20px'  },
+    show: { opacity: 1,
+      y:0 },
   };
+
   return (
-    <motion.section
+    <section
       id="about"
       className="about flex justify-center main-container"
+      >
+      <motion.div className="left"
       variants={container}
       initial="hidden"
       animate="show"
-    >
-      <div className="left">
-        <h3 variants={item}>Hi! I'm On Chetrit</h3>
-        <h1 variants={item}>Full-Stack Web Developer</h1>
-        <p variants={item}>
+      
+      >
+        <motion.h3 variants={item}>Hi! I'm On Chetrit</motion.h3>
+        <motion.h1 variants={item}>Full-Stack Web Developer</motion.h1>
+        <motion.p variants={item}>
           Well-qualified Full Stack Developer familiar with wide range of
           programming utilities and languages. Knowledgeable of backend and
           frontend development requirements.
-        </p>
-        <p variants={item}>
+        </motion.p>
+        <motion.p variants={item}>
           Handle any part of process with ease. Collaborative team player with
           excellent technical abilities, hard worker, focusing on problem
           solving. self-learner and adapt quickly to new environments.
-        </p>
+        </motion.p>
         <div className="actions flex" variants={item}>
           <div className="container-button">
             <span className="mas flex auto-center">Contact Me</span>
@@ -53,7 +56,7 @@ export const About = () => {
           </div>
           {/* <button className="mas flex auto-center">Download CV</button> */}
         </div>
-      </div>
+      </motion.div>
       <div className="right flex auto-center">
         <div className="photo" variants={item}>
           <Tilt
@@ -83,6 +86,6 @@ export const About = () => {
           </Tilt>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };

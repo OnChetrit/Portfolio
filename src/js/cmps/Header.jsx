@@ -1,32 +1,63 @@
-import { Link } from 'react-scroll';
-import { Menu } from './Menu';
+import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
-import { projects } from '../services/project.service';
+import { Menu } from "./Menu";
+import { projects } from "../services/project.service";
 
 export const Header = ({ setMenuOpen, menuOpen }) => {
-  const links = ['about', 'projects', 'contact'];
+  const links = ["about", "projects", "contact"];
+
+  const variants = {
+    open: {
+      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    },
+    closed: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
+  const itemVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+      },
+    },
+  };
+
   return (
     <header className="flex">
-      <nav className="flex align-center space-between main-container">
+      <nav
+        variants={variants}
+        className="flex align-center space-between main-container"
+      >
         <span>On Chetrit</span>
         <div className="burger-menu">
           <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
         </div>
 
-        <ul className="flex nav">
-          <li className="tab">
+        <motion.ul variants={variants} className="flex nav">
+          <motion.li variants={itemVariants} className="tab">
             <Link to="about" smooth={true} duration={1400}>
               About
             </Link>
-          </li>
-          <li className="tab">
+          </motion.li>
+          <motion.li variants={itemVariants} className="tab projects-hover">
             <div className="projects flex align-center">Projects</div>
             <div className="dropdown-container">
               <ul className="dropdown main-container flex">
                 {projects.map(({ title, thumbnails }) => {
                   return (
                     <li className="tab flex align-center" key={title}>
-                      <Link to={thumbnails} smooth={true} duration={1400}>
+                      <Link to={`${thumbnails} - 30px`} smooth={true} duration={1400}>
                         {title}
                       </Link>
                     </li>
@@ -34,13 +65,13 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
                 })}
               </ul>
             </div>
-          </li>
-          <li className="tab">
+          </motion.li>
+          <motion.li variants={itemVariants} className="tab">
             <Link to="contact" smooth={true} duration={1400}>
               Contact
             </Link>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
       </nav>
     </header>
   );

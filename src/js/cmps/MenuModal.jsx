@@ -8,10 +8,17 @@ export const MenuModal = ({ setMenuOpen, menuOpen }) => {
 
   const scrollToSection = (link) => {
     scroller.scrollTo(link, {
-      duration: 1800,
-      delay: 500,
-      smooth: 'easeInOutQuart',
+      duration: 3800,
+      delay: 100,
+      // smooth: true,
+      offset: '150px'
     });
+  };
+
+  const container = {
+    show: {
+      transition: { staggerChildren: 0.1, delayChildren: 0.3 }
+    },
   };
 
   const sideVariants = {
@@ -37,7 +44,11 @@ export const MenuModal = ({ setMenuOpen, menuOpen }) => {
   };
 
   return (
-    <div className="menu-modal flex column auto-center">
+    <motion.div className="menu-modal flex column auto-center"
+    variants={container}
+      initial="hidden"
+      animate="show"
+      >
       {links.map((link) => {
         return (
           <motion.div
@@ -46,7 +57,7 @@ export const MenuModal = ({ setMenuOpen, menuOpen }) => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            onClick={(e) => {
+            onClick={() => {
               setMenuOpen(false);
               scrollToSection(link);
             }}
@@ -55,6 +66,6 @@ export const MenuModal = ({ setMenuOpen, menuOpen }) => {
           </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };

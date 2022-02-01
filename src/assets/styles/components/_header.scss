@@ -3,15 +3,14 @@ header {
   border-bottom: 2px solid $clr2;
   font-size: rem(18px);
   width: 100%;
-  background: #2965f1bd;
+  background: $clr1;
   margin-bottom: 50px;
   position: sticky;
   top: 0;
   z-index: 15;
   backdrop-filter: blur(5px);
-  transition: height 0.5s ease-in-out;
-
   font-family: $font-b;
+
   span {
   }
 
@@ -46,30 +45,29 @@ header {
         display: flex;
         align-items: center;
 
-        .projects {
-          height: 100%;
+        &.projects-hover {
 
-          &:hover ~ header {
-            height: 200px;
+          &:hover {
 
-            & ~ .dropdown-container {
+            .dropdown-container {
               display: block;
             }
           }
         }
 
+        .projects {
+          height: 100%;
+        }
+
         .dropdown-container {
           display: none;
-          width: 100vw;
+          width: calc(100vw - 25px);
           height: 100%;
           position: fixed;
-          bottom: -100%;
+          bottom: calc(-100% - 2px);
           left: 0;
-          background: #2965f1bd;
-          // margin-bottom: 50px;
-          // position: sticky;
-          // z-index: 15
-          backdrop-filter: blur(5px);
+          background: $clr1;
+          border-bottom: 2px solid $clr2;
 
           .dropdown {
             height: 100%;

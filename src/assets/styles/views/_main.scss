@@ -3,7 +3,7 @@
     > section:not(:last-child) {
       z-index: 2;
       &:not(:first-child) {
-        padding-bottom: 250px;
+        padding-bottom: 200px;
       }
     }
   }
