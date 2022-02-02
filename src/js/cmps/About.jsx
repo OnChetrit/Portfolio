@@ -5,29 +5,24 @@ import Tilt from 'react-parallax-tilt';
 
 export const About = () => {
   const container = {
-    hidden: { opacity: 0},
+    hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.4 }
+      transition: { staggerChildren: 0.1, delayChildren: 0.4 },
     },
   };
   const item = {
-    hidden: { opacity: 0,
-      y:'-20px'  },
-    show: { opacity: 1,
-      y:0 },
+    hidden: { opacity: 0, y: '-20px' },
+    show: { opacity: 1, y: 0 },
   };
 
   return (
-    <section
-      id="about"
-      className="about flex justify-center main-container"
-      >
-      <motion.div className="left"
-      variants={container}
-      initial="hidden"
-      animate="show"
-      
+    <section id="about" className="about flex justify-center main-container">
+      <motion.div
+        className="left"
+        variants={container}
+        initial="hidden"
+        animate="show"
       >
         <motion.h3 variants={item}>Hi! I'm On Chetrit</motion.h3>
         <motion.h1 variants={item}>Full-Stack Web Developer</motion.h1>
@@ -51,10 +46,9 @@ export const About = () => {
             </button>
           </div>
           <div className="container-button">
-            <span className="mas flex auto-center">Download CV</span>
-            <button className="contact-me">Download CV</button>
+            <span className="mas flex auto-center opp">Download CV</span>
+            <button className="contact-me opp">Download CV</button>
           </div>
-          {/* <button className="mas flex auto-center">Download CV</button> */}
         </div>
       </motion.div>
       <div className="right flex auto-center">

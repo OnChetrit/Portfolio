@@ -44,7 +44,7 @@ a {
 button {
   border: none;
   outline: none;
-  background: transparent;
+  background: inherit;
   font-family: $font-r;
   cursor: pointer;
   padding: 0;
@@ -60,11 +60,10 @@ input {
   font-family: $font-r;
 }
 
-ul
-{
-list-style: none;
-padding: 0;
-margin: 0;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 ::-moz-selection {

@@ -1,78 +1,34 @@
 import { useState } from 'react';
-import { send } from 'emailjs-com';
+import { Link } from 'react-router-dom';
 
 export const Contact = () => {
-  const [toSend, setToSend] = useState({
-    from_name: '',
-    reply_to: '',
-    subject: '',
-    message: '',
-  });
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    const SERVICE_ID = 'service_7k0bseb';
-    const TEMPLATE_ID = 'template_6y0hmdu';
-    const USER_ID = 'user_Gnqw3qvXdEpc2FxvRpQ3p';
-
-    await send(SERVICE_ID, TEMPLATE_ID, toSend, USER_ID)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-      })
-      .catch((err) => {
-        console.log('FAILED...', err);
-      });
-
-    setToSend({
-      from_name: '',
-      reply_to: '',
-      subject: '',
-      message: '',
-    });
-  };
-
-  const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
-  };
+  const socials = [
+    { title: 'Instagram', path: 'https://www.instagram.com/onchetrit/' },
+    { title: 'LinkedIn', path: 'https://www.linkedin.com/in/on-chetrit/' },
+    { title: 'Github', path: 'https://github.com/OnChetrit' },
+  ];
 
   return (
     <section id="contact" className="contact">
-      <div className="flex auto-center section-header">- Contact -</div>
-      <div className="container flex auto-center main-container">
-        <div className="info">
-          <h4>Get in touch</h4>
+      <div className="container flex column">
+        <div className="massage flex column auto-center">
+          <h4>Thank you for scrolling</h4>
+          <h3>Let' get in touch</h3>
+          <button>Send me an E-mail</button>
         </div>
-        <form onSubmit={onSubmit} className="flex column">
-          <input
-            type="text"
-            name="from_name"
-            placeholder="from name"
-            value={toSend.from_name}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="reply_to"
-            placeholder="Your email"
-            value={toSend.reply_to}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            value={toSend.subject}
-            onChange={handleChange}
-          />
-          <textarea
-            type="text"
-            name="message"
-            placeholder="Your message"
-            value={toSend.message}
-            onChange={handleChange}
-          />
-          <button type="submit">Send</button>
-        </form>
+        <div className="social">
+          <p>Check out my networks</p>
+          <p>to follow my new adventures</p>
+          <div className="links flex auto-center">
+            {socials.map(({ path, title }) => {
+              return (
+                <Link to={{ pathname: path }} className="ul" target="_blank">
+                  {title}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 header {
-  height: 100px;
-  border-bottom: 2px solid $clr2;
+  height: 80px;
+  outline: 2px solid $clr2;
+  outline-width: 0 0 2px 0;
   font-size: rem(18px);
   width: 100%;
   background: $clr1;
@@ -12,6 +13,7 @@ header {
   font-family: $font-b;
 
   span {
+    font-size: clamp(rem(20px), 2vw, rem(26px));
   }
 
   nav {
@@ -46,9 +48,7 @@ header {
         align-items: center;
 
         &.projects-hover {
-
           &:hover {
-
             .dropdown-container {
               display: block;
             }
@@ -61,14 +61,14 @@ header {
 
         .dropdown-container {
           display: none;
-          width: calc(100vw - 25px);
+          width: calc(100vw - 17px);
           height: 100%;
           position: fixed;
-          bottom: calc(-100% - 2px);
+          bottom: calc(-100%);
           left: 0;
           background: $clr1;
-          border-bottom: 2px solid $clr2;
-
+          // outline: 2px solid $clr2;
+          outline-width: 0 0 2px 0;
           .dropdown {
             height: 100%;
             margin: 0 auto;

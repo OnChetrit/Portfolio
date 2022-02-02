@@ -10,6 +10,20 @@
   font-family: plex-bold;
   src: url(../../fonts/IBM_Plex_Mono/IBMPlexMono-Bold.ttf);
 }
+
+@font-face {
+  font-family: sans-regular;
+  src: url(../../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf);
+}
+@font-face {
+  font-family: sans-semibold;
+  src: url(../../fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf);
+}
+@font-face {
+  font-family: sans-bold;
+  src: url(../../fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf);
+}
+
 @font-face {
   font-family: code-regular;
   src: url(../../fonts/Source_Code_Pro/SourceCodePro-Regular.ttf);
@@ -22,6 +36,7 @@
   font-family: code-bold;
   src: url(../../fonts/Source_Code_Pro/SourceCodePro-Bold.ttf);
 }
+
 @font-face {
   font-family: roboto-regular;
   src: url(../../fonts/Roboto/Roboto-Thin.ttf);

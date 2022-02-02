@@ -5,6 +5,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 100px;
+  background: inherit;
 
   @include for-normal-layout {
     @media (min-width: $narrow-breakpoint) {
@@ -23,32 +24,30 @@
 
     h1 {
       font-family: $font-sb;
-      font-size: clamp(rem(32px), 5vw, rem(72px));
+      font-size: clamp(rem(32px), 3.4vw, rem(72px));
       margin-bottom: 32px;
       line-height: 1;
     }
 
     p {
-      font-size: clamp(rem(14px), 2vw, rem(18px));
+      font-size: clamp(rem(19px), 1.25vw, rem(32px));
       margin-bottom: 32px;
     }
 
     button {
       color: $clr2;
-      font-size: rem(18px);
+      font-size: clamp(rem(14px), 1.25vw, rem(18px));
     }
 
     .actions {
-      justify-content: space-between;
       margin-bottom: 20px;
-      max-width: 350px;
 
       .container-button {
         position: relative;
 
         .mas {
-          height: rem(50px);
-          width: rem(150px);
+          // height: rem(50px);
+          // width: rem(150px);
           position: absolute;
           font-size: rem(18px);
           text-align: center;
@@ -56,11 +55,22 @@
           background: $clr2;
           border-radius: 33px;
           overflow: hidden;
+          font-family: $font-sb;
+          padding: clamp(9px, 1.5vw, 13px) clamp(12px, 1.5vw, 16px);
+          font-size: clamp(rem(14px), 1.25vw, rem(18px));
+
+          &.opp {
+            color: $clr2;
+            background: $clr1;
+            margin-left: 1rem;
+          }
         }
 
         .contact-me {
-          height: rem(50px);
-          width: rem(150px);
+          font-size: clamp(rem(14px), 1.25vw, rem(18px));
+          // height: rem(50px);
+          padding: clamp(9px, 1.5vw, 13px) clamp(12px, 1.5vw, 16px);
+          // width: rem(150px);
           border: 1px solid $clr2;
           border-radius: 33px;
           background: $clr1;
@@ -70,10 +80,17 @@
           mask-size: 7100% 100%;
           // border: none;
           color: $clr2;
-
+          font-family: $font-sb;
           cursor: pointer;
+
           -webkit-animation: ani2 0.7s steps(70) forwards;
           animation: ani2 0.7s steps(70) forwards;
+
+          &.opp {
+            background: $clr2;
+            color: $clr1;
+            margin-left: 1rem;
+          }
 
           &:hover {
             -webkit-animation: ani 0.7s steps(70) forwards;

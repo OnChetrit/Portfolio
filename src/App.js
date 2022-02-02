@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 import { Header } from "./js/cmps/Header";
@@ -12,8 +12,14 @@ import { useWindowSize } from './js/cmps/hooks/useWindowSize';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
   const size = useWindowSize();
 
+  useEffect(() => {
+    setTimeout(() => { setLoading(false); }, 2000)
+  })
+
+  if (loading) return <div>Loadding</div>
   return (
     <div className="app flex column auto-center">
       <Header setMenuOpen={setMenuOpen} menuOpen={menuOpen} />

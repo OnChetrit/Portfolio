@@ -1,10 +1,16 @@
 .contact {
   background: $clr2;
-  width: 100vw;
-  height: 70vh;
+  width: 100%;
+  height: calc(100vh - 100px);
   color: $clr1;
   padding: 50px 0;
   position: relative;
+
+  @include for-normal-layout {
+    @media (min-width: $narrow-breakpoint) {
+      width: 100vw;
+    }
+  }
 
   ::-moz-selection {
     color: $clr2;
@@ -17,49 +23,41 @@
 
   .container {
     position: fixed;
-    bottom: 10vh;
+    bottom: 25px;
     left: 50%;
+    width: 100%;
     transform: translateX(-50%);
-    flex-direction: column;
+    gap: 100px;
+    text-align: center;
 
-    @include for-normal-layout {
-      @media (min-width: $narrow-breakpoint) {
-        flex-direction: row;
+    .massage {
+      h4 {
+        font-size: clamp(rem(36px), 5vw, rem(64px));
+        padding: 0 25px;
       }
-    }
 
-    .info {
-    }
-
-    form {
-      gap: 20px;
-
-      input,
-      textarea {
-        padding: 10px;
-        color: $clr1;
-        border: 1px solid $clr1;
-        border-radius: 6px;
-
-        &::-webkit-input-placeholder {
-          color: $clr1;
-        }
-        /*firefox 19+ versions*/
-        &::-moz-placeholder {
-          color: $clr1;
-        }
-        /*IE  versions*/
-        &::-ms-placeholder {
-          color: $clr1;
-        }
-        /*Latest modern browsers */
-
-        &::placeholder {
-          color: $clr1;
-        }
+      h3 {
+        font-size: clamp(rem(40px), 5vw, rem(72px));
+        font-family: $font-b;
+        padding-bottom: 40px;
       }
+
       button {
-        color: $clr1;
+        font-family: $font-sb;
+        font-size: clamp(rem(18px), 5vw, rem(36px));
+        background: $clr1;
+        color: $clr2;
+        border-radius: 25px;
+        padding: 10px 25px;
+      }
+    }
+
+    .social {
+      .links {
+        gap: 15px;
+        a {
+          text-decoration: underline;
+        }
       }
     }
   }

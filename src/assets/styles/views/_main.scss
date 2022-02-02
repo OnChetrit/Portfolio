@@ -1,5 +1,7 @@
 .app {
+  background: inherit;
   main {
+    background: inherit;
     > section:not(:last-child) {
       z-index: 2;
       &:not(:first-child) {
@@ -20,4 +22,8 @@
     gap: 60px;
     z-index: 10;
   }
+}
+
+#root {
+  background: inherit;
 }
