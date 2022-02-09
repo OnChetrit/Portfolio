@@ -1,7 +1,30 @@
 .skills {
-  height: 300px;
-  width: 100%;
-  gap: 20px;
+  background: $clr2;
+  z-index: 2;
+  position: relative;
+  height: 200px;
+
+  .section-header {
+    font-family: $font-sb;
+    padding-bottom: 50px;
+    font-size: clamp(rem(24px), 5vw, rem(62px));
+    z-index: 2;
+    color: $clr1;
+    background: transparent;
+    position: absolute;
+    top: -7vh;
+    left: 17vw;
+    width: 50vw;
+  }
+  .skills-container {
+    width: 100vw;
+    margin: 0 auto;
+    @include for-normal-layout {
+      @media (min-width: $wide-breakpoint) {
+        max-width: 1200px;
+      }
+    }
+  }
 }
 .skill-container {
   // height: 200px;

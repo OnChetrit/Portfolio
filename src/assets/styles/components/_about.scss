@@ -1,142 +1,87 @@
 .about {
+  position: relative;
   padding: 0 25px;
-  width: 100vw;
-  padding-bottom: 150px;
-  flex-direction: column;
+  padding-bottom: 250px;
   flex-wrap: wrap;
   gap: 100px;
-  background: inherit;
+  background: $clr1;
 
-  @include for-normal-layout {
-    @media (min-width: $narrow-breakpoint) {
-      gap: 20px;
-      flex-direction: row;
-    }
-  }
-
-  .left {
-    flex: 1;
-
-    h3 {
-      font-size: clamp(rem(24px), 2vw, rem(32px));
-      margin-bottom: 9px;
+  .top {
+    flex-direction: column;
+    @include for-normal-layout {
+      @media (min-width: $narrow-breakpoint) {
+        gap: 20px;
+        flex-direction: row;
+      }
     }
 
-    h1 {
-      font-family: $font-sb;
-      font-size: clamp(rem(32px), 3.4vw, rem(72px));
-      margin-bottom: 32px;
-      line-height: 1;
+    .left {
+      flex: 1;
+
+      h3 {
+        font-size: clamp(rem(24px), 2vw, rem(32px));
+        margin-bottom: 9px;
+      }
+
+      h1 {
+        font-family: $font-sb;
+        font-size: clamp(rem(32px), 3.4vw, rem(62px));
+        margin-bottom: 32px;
+        line-height: 1;
+      }
+
+      p {
+        font-size: clamp(rem(19px), 1.25vw, rem(26px));
+        margin-bottom: 32px;
+      }
+
+      button {
+        color: $clr2;
+        font-size: clamp(rem(14px), 1.25vw, rem(18px));
+      }
+
+      .actions {
+        margin-bottom: 20px;
+
+        .cv {
+        }
+      }
     }
 
-    p {
-      font-size: clamp(rem(19px), 1.25vw, rem(32px));
-      margin-bottom: 32px;
-    }
-
-    button {
-      color: $clr2;
-      font-size: clamp(rem(14px), 1.25vw, rem(18px));
-    }
-
-    .actions {
-      margin-bottom: 20px;
-
-      .container-button {
+    .right {
+      .photo {
         position: relative;
+        max-width: 400px;
+        // left: 50%;
+        // bottom: 5%;
 
-        .mas {
-          // height: rem(50px);
-          // width: rem(150px);
-          position: absolute;
-          font-size: rem(18px);
-          text-align: center;
-          color: $clr1;
-          background: $clr2;
-          border-radius: 33px;
-          overflow: hidden;
-          font-family: $font-sb;
-          padding: clamp(9px, 1.5vw, 13px) clamp(12px, 1.5vw, 16px);
-          font-size: clamp(rem(14px), 1.25vw, rem(18px));
-
-          &.opp {
-            color: $clr2;
-            background: $clr1;
-            margin-left: 1rem;
-          }
+        img {
+          opacity: 0.4;
         }
 
-        .contact-me {
-          font-size: clamp(rem(14px), 1.25vw, rem(18px));
-          // height: rem(50px);
-          padding: clamp(9px, 1.5vw, 13px) clamp(12px, 1.5vw, 16px);
-          // width: rem(150px);
-          border: 1px solid $clr2;
-          border-radius: 33px;
-          background: $clr1;
-          -webkit-mask: url('https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png');
-          mask: url('https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png');
-          -webkit-mask-size: 7100% 100%;
-          mask-size: 7100% 100%;
-          // border: none;
-          color: $clr2;
-          font-family: $font-sb;
-          cursor: pointer;
-
-          -webkit-animation: ani2 0.7s steps(70) forwards;
-          animation: ani2 0.7s steps(70) forwards;
-
-          &.opp {
-            background: $clr2;
-            color: $clr1;
-            margin-left: 1rem;
-          }
-
-          &:hover {
-            -webkit-animation: ani 0.7s steps(70) forwards;
-            animation: ani 0.7s steps(70) forwards;
-          }
-        }
-      }
-
-      .cv {
-      }
-    }
-  }
-
-  .right {
-    .photo {
-      position: relative;
-      max-width: 400px;
-      // left: 50%;
-      // bottom: 5%;
-
-      img {
-        opacity: 0.4;
-      }
-
-      .circle {
-        position: absolute;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        bottom: -75px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 5;
-
-        .text {
-          font-family: $font-sb;
+        .circle {
           position: absolute;
-          width: 100%;
-          height: 100%;
-          animation: rotateText 10s linear infinite;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          bottom: -75px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 5;
 
-          span {
+          .text {
+            font-family: $font-sb;
             position: absolute;
-            left: 50%;
-            font-size: 1.2rem;
-            transform-origin: 0 75px;
+            width: 100%;
+            height: 100%;
+            animation: rotateText 10s linear infinite;
+
+            span {
+              position: absolute;
+              left: 50%;
+              font-size: 1.2rem;
+              transform-origin: 0 75px;
+            }
           }
         }
       }

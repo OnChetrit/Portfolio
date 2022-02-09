@@ -1,40 +1,39 @@
 import { Link } from 'react-router-dom';
 import Tilt from 'react-parallax-tilt';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useWindowSize } from './hooks/useWindowSize';
 
 import { SVG } from './dynamic/SVG';
 import { projects } from '../services/project.service';
 
-import Wednesday from '../../assets/img/thumbnails/Wednesday.png';
-import Appsus from '../../assets/img/thumbnails/Appsus.png';
-import TouchTheNumbers from '../../assets/img/thumbnails/TouchTheNumbers.png';
-import MemeGenerator from '../../assets/img/thumbnails/MemeGenerator.png';
-import Minesweeper from '../../assets/img/thumbnails/Minesweeper.png';
-
 export const ProjectList = () => {
-  const renderImg = (src) => {
-    switch (src) {
-      case 'Wednesday':
-        return Wednesday;
-      case 'Appsus':
-        return Appsus;
-      case 'TouchTheNumbers':
-        return TouchTheNumbers;
-      case 'MemeGenerator':
-        return MemeGenerator;
-      case 'Minesweeper':
-        return Minesweeper;
-      default:
-        return;
-    }
+  const size = useWindowSize();
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (
-    <>
-      <div className="flex auto-center section-header">- Projects -</div>
+    <div className="project-list">
+      {/* <h4 className="section-header main-container"> Projects .</h4> */}
       <>
         {projects.map(
           ({
             title,
+            folder,
             genre,
             desc,
             madeWith,
@@ -82,16 +81,41 @@ export const ProjectList = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="thumbnail flex align-center">
-                  <Tilt perspective={2000} transitionSpeed={3000}>
+                <div
+                  className="slider"
+                  style={{
+                    width: size.width > 960 ? size.width / 2 - 50 : '100%',
+                  }}
+                >
+                  <Slider {...settings}>
+                    {thumbnails.map((thumbnail) => {
+                      return (
+                        <div className="thumbnail">
+                          <img
+                            src={
+                              require(`../../assets/img/thumbnails/${folder}/${thumbnail}.png`)
+                                .default
+                            }
+                            alt=""
+                          />
+                          <div className="count">
+                            <span>
+                              {thumbnail}/{thumbnails.length}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Slider>
+                  {/* <Tilt perspective={2000} transitionSpeed={3000}>
                     <img src={renderImg(thumbnails)} alt="" srcSet="" />
-                  </Tilt>
+                  </Tilt> */}
                 </div>
               </section>
             );
           }
         )}
       </>
-    </>
+    </div>
   );
 };

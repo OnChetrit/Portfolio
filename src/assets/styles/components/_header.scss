@@ -1,7 +1,5 @@
 header {
   height: 80px;
-  outline: 2px solid $clr2;
-  outline-width: 0 0 2px 0;
   font-size: rem(18px);
   width: 100%;
   background: $clr1;
@@ -20,6 +18,7 @@ header {
     margin: 0 auto;
     padding: 0 25px;
     position: relative;
+    width: 100%;
 
     .burger-menu {
       display: block;

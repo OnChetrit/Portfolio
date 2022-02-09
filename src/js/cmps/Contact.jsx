@@ -22,7 +22,12 @@ export const Contact = () => {
           <div className="links flex auto-center">
             {socials.map(({ path, title }) => {
               return (
-                <Link to={{ pathname: path }} className="ul" target="_blank">
+                <Link
+                  to={{ pathname: path }}
+                  key={title}
+                  className="ul"
+                  target="_blank"
+                >
                   {title}
                 </Link>
               );

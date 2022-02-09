@@ -1,20 +1,17 @@
 .app {
   background: inherit;
   main {
-    background: inherit;
+    width: 100%;
+    position: relative;
+    background: $clr2;
     > section:not(:last-child) {
       z-index: 2;
-      &:not(:first-child) {
-        padding-bottom: 200px;
-      }
     }
   }
   .menu-modal {
     position: fixed;
     inset: 0;
-    background-color: rgba(41, 101, 241, 0.7);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(8px);
+    background-color: $clr1;
     font-size: rem(28px);
     font-family: $font-b;
     text-transform: capitalize;

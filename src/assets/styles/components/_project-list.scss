@@ -1,61 +1,145 @@
-.section-header {
-  font-family: $font-sb;
-  padding-bottom: 50px;
-  font-size: clamp(rem(24px), 5vw, rem(32px));
-  z-index: 2;
+.custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 221px;
+  }
+  .shape-fill {
+    fill: #f4f7fe;
+  }
 }
+.project-list {
+  z-index: 2;
+  background: $clr2;
+  position: relative;
 
-.project {
-  padding: 20px;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 40px;
-  background: inherit;
+  ::-moz-selection {
+    color: $clr2;
+    background: $clr1;
+  }
+  ::selection {
+    color: $clr2;
+    background: $clr1;
+  }
 
-  @include for-normal-layout {
-    @media (min-width: $narrow-breakpoint) {
+  .section-header {
+    font-family: $font-sb;
+    padding-bottom: 50px;
+    font-size: clamp(rem(24px), 5vw, rem(48px));
+    z-index: 2;
+    color: $clr1;
+    background: transparent;
+    position: absolute;
+    top: -8vh;
+    left: 15vw;
+  }
+
+  .project {
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 40px;
+    color: $clr4;
+    background: $clr2;
+    padding-bottom: 200px;
+
+    &:first-child {
+      margin-top: 100px;
+    }
+
+    @include for-wide-layout {
       flex-direction: row;
 
       &:nth-child(2n) {
         flex-direction: row-reverse;
       }
     }
-  }
 
-  .project-info {
-    flex: 1;
-
-    h5 {
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
-    h2 {
-      font-family: $font-b;
-      margin-bottom: 20px;
-      font-size: clamp(rem(24px), 2vw, rem(32px));
-    }
-
-    .desc {
-      font-size: clamp(rem(14px), 2vw, rem(18px));
+    .project-info {
       flex: 1;
-    }
 
-    .skills-used {
-      gap: 25px;
-      margin: 20px 0;
+      h5 {
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+      h2 {
+        font-family: $font-b;
+        margin-bottom: 20px;
+        font-size: clamp(rem(24px), 2vw, rem(32px));
+      }
 
-      svg {
-        height: 50px;
+      .desc {
+        font-size: clamp(rem(14px), 2.5vw, rem(18px));
+        flex: 1;
+      }
+
+      .skills-used {
+        gap: 25px;
+        margin: 20px 0;
+
+        svg {
+          height: 50px;
+        }
+      }
+
+      .project-actions {
+        max-width: 150px;
+        margin-bottom: 20px;
       }
     }
 
-    .project-actions {
-      max-width: 150px;
-      margin-bottom: 20px;
-    }
-  }
+    .slider {
+      // flex: 1;
+      width: 100%;
+      max-width: 960px;
 
-  .thumbnail {
-    flex: 1;
+      @include for-wide-layout {
+        max-width: 650px;
+      }
+
+      .slick-prev,
+      .slick-next {
+        &:before {
+          color: $clr1;
+        }
+      }
+
+      .thumbnail {
+        outline: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+          // aspect-ratio: 16/9;
+        }
+
+        .count {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 90px;
+          height: 90px;
+          transform: translate(30px, 30px);
+          background: $clr1;
+          color: $clr2;
+          border-radius: 50%;
+          span {
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+          }
+        }
+      }
+    }
   }
 }

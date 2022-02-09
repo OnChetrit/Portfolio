@@ -11,13 +11,28 @@ export const MenuModal = ({ setMenuOpen, menuOpen }) => {
       duration: 3800,
       delay: 100,
       // smooth: true,
-      offset: '150px'
+      offset: '150px',
     });
   };
 
   const container = {
+    hidden: { y: '-100vh' },
+    visible: { y: 0 },
     show: {
-      transition: { staggerChildren: 0.1, delayChildren: 0.3 }
+      transition: {
+        type: 'spring',
+        stiffness: 20,
+        restDelta: 2,
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+    exit: {
+      y: '-100vh',
+      delay: 0.5,
+      type: 'spring',
+      stiffness: 400,
+      damping: 40,
     },
   };
 
@@ -31,6 +46,7 @@ export const MenuModal = ({ setMenuOpen, menuOpen }) => {
       opacity: 1,
       transition: {
         duration: 1.2,
+        delay: 0.3,
         type: 'spring',
         damping: 25,
         stiffness: 500,
@@ -44,11 +60,14 @@ export const MenuModal = ({ setMenuOpen, menuOpen }) => {
   };
 
   return (
-    <motion.div className="menu-modal flex column auto-center"
-    variants={container}
+    <motion.div
+      className="menu-modal flex column auto-center"
+      variants={container}
       initial="hidden"
-      animate="show"
-      >
+      animate="visible"
+      exit="exit"
+      // animate="show"
+    >
       {links.map((link) => {
         return (
           <motion.div
@@ -66,6 +85,16 @@ export const MenuModal = ({ setMenuOpen, menuOpen }) => {
           </motion.div>
         );
       })}
+      <motion.div
+        variants={sideVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="tab container-button"
+      >
+        <span className="mas flex auto-center opp">Download CV</span>
+        <button className="contact-me opp">Download CV</button>
+      </motion.div>
     </motion.div>
   );
 };

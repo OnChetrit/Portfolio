@@ -1,11 +1,11 @@
-import { Link } from "react-scroll";
-import { motion } from "framer-motion";
+import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
-import { Menu } from "./Menu";
-import { projects } from "../services/project.service";
+import { Menu } from './Menu';
+import { projects } from '../services/project.service';
 
 export const Header = ({ setMenuOpen, menuOpen }) => {
-  const links = ["about", "projects", "contact"];
+  const links = ['about', 'projects', 'contact'];
 
   const variants = {
     open: {
@@ -35,9 +35,9 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
 
   return (
     <header className="flex">
-      <nav
+      <motion.nav
         variants={variants}
-        className="flex align-center space-between main-container"
+        className="flex align-center space-between"
       >
         <span>On Chetrit</span>
         <div className="burger-menu">
@@ -57,7 +57,11 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
                 {projects.map(({ title, thumbnails }) => {
                   return (
                     <li className="tab flex align-center" key={title}>
-                      <Link to={`${thumbnails} - 30px`} smooth={true} duration={1400}>
+                      <Link
+                        to={`${thumbnails} - 30px`}
+                        smooth={true}
+                        duration={1400}
+                      >
                         {title}
                       </Link>
                     </li>
@@ -71,8 +75,12 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
               Contact
             </Link>
           </motion.li>
+          <motion.div className="tab container-button">
+            <span className="mas flex auto-center opp">Download CV</span>
+            <button className="contact-me opp">Download CV</button>
+          </motion.div>
         </motion.ul>
-      </nav>
+      </motion.nav>
     </header>
   );
 };

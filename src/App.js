@@ -3,10 +3,11 @@ import { AnimatePresence } from 'framer-motion';
 
 import { Header } from "./js/cmps/Header";
 import { About } from "./js/cmps/About";
-// import { Skills } from "./js/cmps/Skills";
-import { ProjectList } from "./js/cmps/Projects";
+import { Skills } from "./js/cmps/Skills";
+import { ProjectList } from "./js/cmps/ProjectList";
 import { Contact } from "./js/cmps/Contact";
 import { MenuModal } from './js/cmps/MenuModal';
+
 import { useWindowSize } from './js/cmps/hooks/useWindowSize';
 
 
@@ -25,7 +26,7 @@ function App() {
       <Header setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
       <main className="flex column">
         <About />
-        {/* <Skills /> */}
+        <Skills />
         <ProjectList />
         <Contact />
       </main>
