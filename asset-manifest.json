@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.1b75a1d2.chunk.css",
-    "main.js": "/portfolio/static/js/main.697ddc3d.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.697ddc3d.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.c757c867.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.c757c867.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.0bf68c44.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.0bf68c44.js.map",
     "static/css/2.ba69f5a0.chunk.css": "/portfolio/static/css/2.ba69f5a0.chunk.css",
-    "static/js/2.f4cd17e1.chunk.js": "/portfolio/static/js/2.f4cd17e1.chunk.js",
-    "static/js/2.f4cd17e1.chunk.js.map": "/portfolio/static/js/2.f4cd17e1.chunk.js.map",
+    "static/js/2.e5488d7b.chunk.js": "/portfolio/static/js/2.e5488d7b.chunk.js",
+    "static/js/2.e5488d7b.chunk.js.map": "/portfolio/static/js/2.e5488d7b.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.ba69f5a0.chunk.css.map": "/portfolio/static/css/2.ba69f5a0.chunk.css.map",
     "static/css/main.1b75a1d2.chunk.css.map": "/portfolio/static/css/main.1b75a1d2.chunk.css.map",
-    "static/js/2.f4cd17e1.chunk.js.LICENSE.txt": "/portfolio/static/js/2.f4cd17e1.chunk.js.LICENSE.txt",
-    "static/media/1.png": "/portfolio/static/media/1.a25412d0.png",
-    "static/media/2.png": "/portfolio/static/media/2.fb33de66.png",
-    "static/media/3.png": "/portfolio/static/media/3.9550d5e6.png",
-    "static/media/4.png": "/portfolio/static/media/4.8feef64a.png",
+    "static/js/2.e5488d7b.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e5488d7b.chunk.js.LICENSE.txt",
+    "static/media/1.png": "/portfolio/static/media/1.ff85e849.png",
+    "static/media/2.png": "/portfolio/static/media/2.ffefd03d.png",
+    "static/media/3.png": "/portfolio/static/media/3.79a75f2c.png",
+    "static/media/4.png": "/portfolio/static/media/4.248cd879.png",
+    "static/media/5.png": "/portfolio/static/media/5.c974a14e.png",
     "static/media/Appsus.png": "/portfolio/static/media/Appsus.ec521163.png",
     "static/media/styles.scss": "/portfolio/static/media/SourceSansPro-SemiBold.623603c2.ttf",
     "static/media/MemeGenerator.png": "/portfolio/static/media/MemeGenerator.c8a3a0f2.png",
@@ -41,8 +42,8 @@
   "entrypoints": [
     "static/js/runtime-main.0bf68c44.js",
     "static/css/2.ba69f5a0.chunk.css",
-    "static/js/2.f4cd17e1.chunk.js",
+    "static/js/2.e5488d7b.chunk.js",
     "static/css/main.1b75a1d2.chunk.css",
-    "static/js/main.697ddc3d.chunk.js"
+    "static/js/main.c757c867.chunk.js"
   ]
 }
