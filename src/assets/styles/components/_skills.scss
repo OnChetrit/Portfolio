@@ -19,17 +19,19 @@
   .skills-container {
     width: 100vw;
     margin: 0 auto;
-    @include for-normal-layout {
-      @media (min-width: $wide-breakpoint) {
-        max-width: 1200px;
-      }
+    @include for-x-wide-layout {
+      max-width: 800px;
     }
   }
 }
+
 .skill-container {
-  // height: 200px;
-  width: 200px;
+  // margin: 0 20px;
   svg {
-    height: 50px;
+    height: 40px;
+
+    @include for-normal-layout {
+      height: 50px;
+    }
   }
 }

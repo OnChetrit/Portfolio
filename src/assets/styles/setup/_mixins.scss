@@ -23,6 +23,11 @@
     @content;
   }
 }
+@mixin for-x-wide-layout {
+  @media (min-width: $wide-breakpoint) {
+    @content;
+  }
+}
 
 /* Theme  Mixins */
 @mixin theme-colors($light-theme: true) {

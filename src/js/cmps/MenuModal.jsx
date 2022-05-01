@@ -1,99 +1,84 @@
-import { scroller } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
+import cv from '../../assets/docs/on-chetrit-cv.pdf';
 
-import { projects } from '../services/project.service';
-
-export const MenuModal = ({ setMenuOpen, menuOpen }) => {
-  const links = ['about', 'projects', 'contact'];
-
-  const scrollToSection = (link) => {
-    scroller.scrollTo(link, {
-      duration: 3800,
-      delay: 100,
-      // smooth: true,
-      offset: '150px',
-    });
-  };
-
-  const container = {
-    hidden: { y: '-100vh' },
-    visible: { y: 0 },
-    show: {
-      transition: {
-        type: 'spring',
-        stiffness: 20,
-        restDelta: 2,
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
+const container = {
+  hidden: { y: '-100%' },
+  show: {
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.6, 0.01, -0.05, 0.95],
+      staggerChildren: 1,
+      delayChildren: 0.8,
     },
-    exit: {
-      y: '-100vh',
+  },
+  exit: {
+    y: '-100%',
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 0.8,
       delay: 0.5,
-      type: 'spring',
-      stiffness: 400,
-      damping: 40,
     },
-  };
+  },
+};
 
-  const sideVariants = {
-    hidden: {
-      x: '100vw',
-      opacity: 0,
+const item = {
+  hidden: {
+    x: '100vw',
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: 0.8,
     },
-    visible: {
-      x: '0',
-      opacity: 1,
-      transition: {
-        duration: 1.2,
-        delay: 0.3,
-        type: 'spring',
-        damping: 25,
-        stiffness: 500,
-        staggerChildren: 1,
-      },
+  },
+  exit: {
+    x: '-100vw',
+    opacity: 0,
+    transition: {
+      duration: 0.5,
     },
-    exit: {
-      x: '-100vw',
-      opacity: 0,
-    },
-  };
+  },
+};
 
+export const MenuModal = ({ setMenuOpen }) => {
+  const links = ['about', 'contact'];
   return (
     <motion.div
       className="menu-modal flex column auto-center"
       variants={container}
       initial="hidden"
-      animate="visible"
+      animate="show"
       exit="exit"
-      // animate="show"
     >
       {links.map((link) => {
         return (
-          <motion.div
-            key={link}
-            variants={sideVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            onClick={() => {
-              setMenuOpen(false);
-              scrollToSection(link);
-            }}
-          >
-            {link}
+          <motion.div key={link} variants={item}>
+            <Link
+              to={link}
+              offset={link === 'contact' ? 0 : -150}
+              smooth={true}
+              duration={1400}
+              delay={1000}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+            >
+              {link}
+            </Link>
           </motion.div>
         );
       })}
-      <motion.div
-        variants={sideVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        className="tab container-button"
-      >
-        <span className="mas flex auto-center opp">Download CV</span>
-        <button className="contact-me opp">Download CV</button>
+      <motion.div variants={item} className="tab container-button">
+        <button className="btn-br modal">
+          <a href={cv} download="on-chetrit-cv">
+            Download CV
+          </a>
+        </button>
       </motion.div>
     </motion.div>
   );

@@ -2,9 +2,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { ReactComponent as Responsive } from '../../assets/img/skills/cross-platform.svg';
 import { ReactComponent as Css } from '../../assets/img/skills/css.svg';
-import { ReactComponent as Expressjs } from '../../assets/img/skills/expressjs.svg';
 import { ReactComponent as Html } from '../../assets/img/skills/html5.svg';
 import { ReactComponent as Js } from '../../assets/img/skills/javascript.svg';
 import { ReactComponent as Jquery } from '../../assets/img/skills/jquery.svg';
@@ -17,15 +15,13 @@ import { ReactComponent as Heroku } from '../../assets/img/skills/heroku.svg';
 
 export const Skills = () => {
   const settings = {
-    // adaptiveHeight: true,
     arrows: false,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     autoplay: true,
-    centerMode: true,
     className: '',
     dots: false,
-    draggable: false,
-    speed: 4000,
+    draggable: true,
+    speed: 3000,
     slidesToShow: 8,
     slidesToScroll: 1,
     responsive: [
@@ -41,7 +37,6 @@ export const Skills = () => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-          initialSlide: 2,
         },
       },
       {
@@ -61,12 +56,6 @@ export const Skills = () => {
         <Slider {...settings}>
           <div className="skill-container">
             <Css />
-          </div>
-          <div className="skill-container">
-            <Responsive />
-          </div>
-          <div className="skill-container">
-            <Expressjs />
           </div>
           <div className="skill-container">
             <Html />
