@@ -1,7 +1,6 @@
 .about {
   position: relative;
-  padding: 0 25px;
-  padding-bottom: 250px;
+  padding: 30px 25px 250px;
   flex-wrap: wrap;
   gap: 100px;
   background: $clr1;
@@ -9,14 +8,17 @@
   .top {
     flex-direction: column;
     @include for-normal-layout {
-      @media (min-width: $narrow-breakpoint) {
-        gap: 20px;
-        flex-direction: row;
-      }
+      gap: 20px;
+      flex-direction: row;
     }
 
     .left {
       flex: 1;
+      padding-bottom: 20px;
+
+      @include for-normal-layout {
+        padding: 0;
+      }
 
       h3 {
         font-size: clamp(rem(24px), 2vw, rem(32px));
@@ -33,18 +35,6 @@
       p {
         font-size: clamp(rem(19px), 1.25vw, rem(26px));
         margin-bottom: 32px;
-      }
-
-      button {
-        color: $clr2;
-        font-size: clamp(rem(14px), 1.25vw, rem(18px));
-      }
-
-      .actions {
-        margin-bottom: 20px;
-
-        .cv {
-        }
       }
     }
 
@@ -94,6 +84,33 @@
     }
     100% {
       transform: rotate(0deg);
+    }
+  }
+}
+
+.social {
+  font-size: clamp(rem(19px), 1.25vw, rem(26px));
+
+  span {
+    margin-right: 20px;
+  }
+
+  svg {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+    .cls-1 {
+      fill: $clr2;
+    }
+    .cls-2 {
+      fill: $clr1;
+    }
+    .cls-5 {
+      fill: $clr1;
     }
   }
 }

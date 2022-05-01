@@ -1,10 +1,14 @@
 .contact {
   color: $clr2;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 60px);
   background-color: $clr1;
   padding: 50px 0;
   position: relative;
+
+  @include for-normal-layout {
+    height: calc(100vh - 80px);
+  }
 
   ::-moz-selection {
     background: $clr2;
@@ -17,10 +21,9 @@
 
   .container {
     position: fixed;
-    bottom: 25px;
     left: 50%;
     width: 100%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50%);
     gap: 100px;
     text-align: center;
 
@@ -45,14 +48,14 @@
         padding: 10px 25px;
       }
     }
-
-    .social {
-      .links {
-        gap: 15px;
-        a {
-          text-decoration: underline;
-        }
-      }
+  }
+}
+.social {
+  gap: 10px;
+  .links {
+    gap: 20px;
+    a {
+      text-decoration: underline;
     }
   }
 }

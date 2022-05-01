@@ -11,8 +11,9 @@ html {
 body {
   margin: 0;
   height: 100vh;
-  background-color: $clr1;
+  // background-color: $clr1;
   overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
 
 img {

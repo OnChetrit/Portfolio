@@ -43,7 +43,6 @@ export const SVG = ({ skill }) => {
         return <Heroku />;
 
       default:
-        return 't';
     }
   };
   return <div className="svg">{renderSvg(skill)}</div>;

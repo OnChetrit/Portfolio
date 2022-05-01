@@ -46,57 +46,16 @@
   }
 }
 
-.container-button {
-  position: relative;
+.btn-br {
+  font-size: clamp(rem(14px), 1.25vw, rem(18px));
+  padding: clamp(9px, 1.5vw, 13px) clamp(12px, 1.5vw, 16px);
+  border-radius: 15px;
+  background: $clr2;
+  color: $clr1;
+  font-family: $font-sb;
+  cursor: pointer;
 
-  .mas {
-    // height: rem(50px);
-    // width: rem(150px);
-    position: absolute;
-    font-size: rem(18px);
-    text-align: center;
-    color: $clr1;
-    background: $clr2;
-    border-radius: 15px;
-    overflow: hidden;
-    font-family: $font-sb;
-    padding: clamp(9px, 1.5vw, 13px) clamp(12px, 1.5vw, 16px);
-    font-size: clamp(rem(14px), 1.25vw, rem(18px));
-
-    &.opp {
-      color: $clr2;
-      background: $clr1;
-    }
-  }
-
-  .contact-me {
-    font-size: clamp(rem(14px), 1.25vw, rem(18px));
-    // height: rem(50px);
-    padding: clamp(9px, 1.5vw, 13px) clamp(12px, 1.5vw, 16px);
-    // width: rem(150px);
-    border: 1px solid $clr2;
-    border-radius: 15px;
-    background: $clr1;
-    -webkit-mask: url('https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png');
-    mask: url('https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png');
-    -webkit-mask-size: 7100% 100%;
-    mask-size: 7100% 100%;
-    // border: none;
-    color: $clr2;
-    font-family: $font-sb;
-    cursor: pointer;
-
-    -webkit-animation: ani2 0.7s steps(70) forwards;
-    animation: ani2 0.7s steps(70) forwards;
-
-    &.opp {
-      background: $clr2;
-      color: $clr1;
-    }
-
-    &:hover {
-      -webkit-animation: ani 0.7s steps(70) forwards;
-      animation: ani 0.7s steps(70) forwards;
-    }
+  &.modal {
+    font-size: rem(28px);
   }
 }

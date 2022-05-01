@@ -5,7 +5,7 @@ export const projects = [
         genre: 'project management platform',
         urlLive: 'http://wednesday-app.herokuapp.com/',
         urlGithub: 'https://github.com/ronbuchris/wednesday',
-        thumbnails: [1, 2, 3],
+        thumbnails: [1, 2, 3, 4, 5],
         desc: ['"Monday" clone, single page End-to-End application', 'built over a span of two weeks and is based on the "Monday" platform.', 'allows real-time task management using WebSockets.'],
         madeWith: ['reactjs', 'javascript', 'sass', 'nodejs', 'mongodb',]
     }, {
@@ -14,7 +14,7 @@ export const projects = [
         genre: 'Multi-App',
         urlLive: 'https://onchetrit.github.io/AppSusSprint3/#/',
         urlGithub: 'https://github.com/OnChetrit/AppSusSprint3',
-        thumbnails: [1, 2, 3, 4],
+        thumbnails: [1, 2, 3, 4, 5],
         desc: ['my first project with React.js, 3 apps in one place!', '"Gmail" clone - send, recieve and delete local emails, save in different catagories', '"Keep" clone - create notes with ease, costumize by color, pin your favorite notes.', 'Book shop - '],
         madeWith: ['javascript', 'reactjs', 'css']
     }, {
@@ -42,7 +42,14 @@ export const projects = [
         urlLive: 'https://onchetrit.github.io/MineSweeperOnChetrit/',
         urlGithub: 'https://github.com/OnChetrit/MineSweeperOnChetrit',
         thumbnails: [1],
-        desc: ['Play the classic game in multiple difficulties.', 'How to play ? ', 'Left click - cell opening.', 'Right click - Flag / Unflag.', 'Wheel click - Opens the surrounding cells only if the number of surrounding bombs is marked as the number on the pressed cell'],
+        desc: ['Play the classic game in multiple difficulties.',
+            'How to play ? ',
+            'Uncover the number board without detonating bombs',
+            'Each number represents the amount of bombs his neighbors circle',
+            'Left click - cell opening.',
+            'Right click - Flag / Unflag.',
+            'Wheel click - Opens the surrounding cells only if the number of surrounding bombs is marked as the number on the pressed cell',
+        ],
         madeWith: ['javascript', 'html', 'css']
     }
 ];
