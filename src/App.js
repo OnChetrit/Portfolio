@@ -17,7 +17,8 @@ function App() {
   const size = useWindowSize();
 
   useEffect(() => {
-    setTimeout(() => { setLoading(false); }, 2000)
+    const timeout = setTimeout(() => { setLoading(false); }, 2000)
+    return (() => { clearTimeout(timeout) })
   })
 
   if (loading) return <div>Loadding</div>

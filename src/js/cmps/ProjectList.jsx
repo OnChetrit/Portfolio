@@ -53,6 +53,22 @@ export const ProjectList = () => {
                     return <p key={p}>{p}</p>;
                   })}
                 </div>
+                <div className="project-actions flex space-between">
+                  <Link
+                    to={{ pathname: urlLive }}
+                    className="action"
+                    target="_blank"
+                  >
+                    View Site
+                  </Link>
+                  <Link
+                    to={{ pathname: urlGithub }}
+                    className="action"
+                    target="_blank"
+                  >
+                    Repo
+                  </Link>
+                </div>
                 <div className="skills-used flex">
                   {madeWith.map((skill) => {
                     return (
@@ -61,22 +77,6 @@ export const ProjectList = () => {
                       </Tilt>
                     );
                   })}
-                </div>
-                <div className="project-actions flex space-between">
-                  <Link
-                    to={{ pathname: urlLive }}
-                    className="ul"
-                    target="_blank"
-                  >
-                    View Site
-                  </Link>
-                  <Link
-                    to={{ pathname: urlGithub }}
-                    className="ul"
-                    target="_blank"
-                  >
-                    Repo
-                  </Link>
                 </div>
               </div>
               <div

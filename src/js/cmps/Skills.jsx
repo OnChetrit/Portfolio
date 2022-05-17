@@ -6,21 +6,22 @@ import { ReactComponent as Css } from '../../assets/img/skills/css.svg';
 import { ReactComponent as Html } from '../../assets/img/skills/html5.svg';
 import { ReactComponent as Js } from '../../assets/img/skills/javascript.svg';
 import { ReactComponent as Jquery } from '../../assets/img/skills/jquery.svg';
+import { ReactComponent as NestJS } from '../../assets/img/skills/nestjs.svg';
+import { ReactComponent as MySQL } from '../../assets/img/skills/mysql.svg';
 import { ReactComponent as Mongodb } from '../../assets/img/skills/mongodb.svg';
 import { ReactComponent as Nodejs } from '../../assets/img/skills/node-js.svg';
 import { ReactComponent as Reactjs } from '../../assets/img/skills/react-js.svg';
-import { ReactComponent as RestApi } from '../../assets/img/skills/rest-api.svg';
 import { ReactComponent as Sass } from '../../assets/img/skills/sass.svg';
-import { ReactComponent as Heroku } from '../../assets/img/skills/heroku.svg';
+import { ReactComponent as Typescript } from '../../assets/img/skills/typescript.svg';
 
 export const Skills = () => {
   const settings = {
     arrows: false,
-    autoplaySpeed: 3000,
+    adaptiveHeight: true,
+    autoplaySpeed: 1000,
     autoplay: true,
-    className: '',
-    dots: false,
-    draggable: true,
+    pauseOnHover: false,
+    draggable: false,
     speed: 3000,
     slidesToShow: 8,
     slidesToScroll: 1,
@@ -58,10 +59,16 @@ export const Skills = () => {
             <Css />
           </div>
           <div className="skill-container">
+            <Sass />
+          </div>
+          <div className="skill-container">
             <Html />
           </div>
           <div className="skill-container">
             <Js />
+          </div>
+          <div className="skill-container">
+            <Typescript />
           </div>
           <div className="skill-container">
             <Jquery />
@@ -70,19 +77,16 @@ export const Skills = () => {
             <Mongodb />
           </div>
           <div className="skill-container">
+            <MySQL />
+          </div>
+          <div className="skill-container">
             <Nodejs />
           </div>
           <div className="skill-container">
             <Reactjs />
           </div>
           <div className="skill-container">
-            <RestApi />
-          </div>
-          <div className="skill-container">
-            <Sass />
-          </div>
-          <div className="skill-container">
-            <Heroku />
+            <NestJS />
           </div>
         </Slider>
       </div>

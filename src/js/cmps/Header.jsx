@@ -52,7 +52,7 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
           <motion.li variants={itemVariants} className="tab projects-hover">
             <div className="projects flex align-center">Projects</div>
             <div className="dropdown-container">
-              <ul className="dropdown main-container flex">
+              <ul className="dropdown flex">
                 {projects.map(({ title }) => {
                   return (
                     <li className="tab flex align-center" key={title}>
