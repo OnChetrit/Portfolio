@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d72c15b1.chunk.css",
-    "main.js": "/portfolio/static/js/main.c77face9.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.c77face9.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.fd6c794a.chunk.css",
+    "main.js": "/portfolio/static/js/main.16f97380.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.16f97380.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.0bf68c44.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.0bf68c44.js.map",
     "static/css/2.ba69f5a0.chunk.css": "/portfolio/static/css/2.ba69f5a0.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.0f97f314.chunk.js.map": "/portfolio/static/js/2.0f97f314.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.ba69f5a0.chunk.css.map": "/portfolio/static/css/2.ba69f5a0.chunk.css.map",
-    "static/css/main.d72c15b1.chunk.css.map": "/portfolio/static/css/main.d72c15b1.chunk.css.map",
+    "static/css/main.fd6c794a.chunk.css.map": "/portfolio/static/css/main.fd6c794a.chunk.css.map",
     "static/js/2.0f97f314.chunk.js.LICENSE.txt": "/portfolio/static/js/2.0f97f314.chunk.js.LICENSE.txt",
     "static/media/1.png": "/portfolio/static/media/1.ff85e849.png",
     "static/media/2.png": "/portfolio/static/media/2.ffefd03d.png",
@@ -36,7 +36,7 @@
     "static/media/linkedin.90ef4c76.svg": "/portfolio/static/media/linkedin.90ef4c76.svg",
     "static/media/mongodb.b5d1dae2.svg": "/portfolio/static/media/mongodb.b5d1dae2.svg",
     "static/media/mysql.befd4aa7.svg": "/portfolio/static/media/mysql.befd4aa7.svg",
-    "static/media/nestjs.fc8415d7.svg": "/portfolio/static/media/nestjs.fc8415d7.svg",
+    "static/media/nestjs.a6a5e5ea.svg": "/portfolio/static/media/nestjs.a6a5e5ea.svg",
     "static/media/node-js.8b933bef.svg": "/portfolio/static/media/node-js.8b933bef.svg",
     "static/media/on-chetrit-cv.21d9db06.pdf": "/portfolio/static/media/on-chetrit-cv.21d9db06.pdf",
     "static/media/on.01b04756.png": "/portfolio/static/media/on.01b04756.png",
@@ -51,7 +51,7 @@
     "static/js/runtime-main.0bf68c44.js",
     "static/css/2.ba69f5a0.chunk.css",
     "static/js/2.0f97f314.chunk.js",
-    "static/css/main.d72c15b1.chunk.css",
-    "static/js/main.c77face9.chunk.js"
+    "static/css/main.fd6c794a.chunk.css",
+    "static/js/main.16f97380.chunk.js"
   ]
 }
