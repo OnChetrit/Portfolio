@@ -25,11 +25,22 @@ section {
     z-index: 2;
     width: 100%;
 
+    &:nth-child(2) {
+      div {
+        animation: animate3 60s linear infinite;
+        animation-delay: -60s;
+
+        &:nth-child(2) {
+          animation: animate4 60s linear infinite;
+          animation-delay: -30s;
+        }
+      }
+    }
+
     div {
       color: $clr1;
       background-color: $clr2;
       font-family: poppins-bold, sans-serif;
-      // font-size: rem(42px);
       font-size: clamp(rem(32px), 4vw, rem(64px));
       white-space: nowrap;
       text-transform: uppercase;
@@ -63,6 +74,23 @@ section {
   }
   100% {
     transform: translateX(-200%);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 

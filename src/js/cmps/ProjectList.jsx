@@ -35,12 +35,22 @@ export const ProjectList = () => {
             Projects -<span> Projects -</span>
             Projects -<span> Projects -</span>
             Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
           </div>
           <div>
             Projects -<span> Projects -</span>
             Projects -<span> Projects -</span>
+            Projects -<span> Projects -</span>
+            Projects -<span> Projects -</span>
+          </div>
+        </div>
+        <div className="infinite-text flex">
+          <div>
+            Projects -<span> Projects -</span>
+            Projects -<span> Projects -</span>
+            Projects -<span> Projects -</span>
+            Projects -<span> Projects -</span>
+          </div>
+          <div>
             Projects -<span> Projects -</span>
             Projects -<span> Projects -</span>
             Projects -<span> Projects -</span>

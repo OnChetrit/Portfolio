@@ -5,7 +5,6 @@
   height: 300px;
 
   .section-header {
-    // font-family: $font-sb;
     font-family: poppins-bold, sans-serif;
     text-transform: uppercase;
     padding-bottom: 50px;
@@ -14,7 +13,7 @@
     color: $clr1;
     background: transparent;
     position: absolute;
-    top: -7vh;
+    top: 0;
     left: 17vw;
     width: 50vw;
   }
