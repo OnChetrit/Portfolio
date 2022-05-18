@@ -9,6 +9,7 @@ import { Contact } from "./js/cmps/Contact";
 import { MenuModal } from './js/cmps/MenuModal';
 
 import { useWindowSize } from './js/cmps/hooks/useWindowSize';
+import { Skills2 } from './js/cmps/Skills2';
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
       <Header setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
       <main className="flex column">
         <About />
-        <Skills />
+        {/* <Skills /> */}
+        <Skills2 />
         <ProjectList />
         <Contact />
       </main>

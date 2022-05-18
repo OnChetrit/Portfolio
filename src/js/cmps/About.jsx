@@ -1,10 +1,7 @@
-import on from "../../assets/img/on.png";
-import { motion } from "framer-motion";
-import Tilt from "react-parallax-tilt";
-import { Divider } from "./Divider";
-
-import { Social } from "./Social";
-import { Dividerr } from "./Dividerr";
+import on from '../../assets/img/on.png';
+import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
+import { Social } from './Social';
 
 const container = {
   show: {
@@ -56,8 +53,8 @@ export const About = () => {
                 <div className="logo"></div>
                 <div className="text">
                   <p>
-                    {"Open To Work - Open To Work - "
-                      .split("")
+                    {'Open To Work - Open To Work - '
+                      .split('')
                       .map((char, i) => {
                         return (
                           <span
@@ -75,8 +72,6 @@ export const About = () => {
           </div>
         </div>
       </div>
-      <Dividerr />
-      {/* <Divider /> */}
     </section>
   );
 };

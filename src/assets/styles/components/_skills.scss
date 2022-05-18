@@ -2,36 +2,56 @@
   background: $clr2;
   z-index: 2;
   position: relative;
-  height: 300px;
+  height: 500px;
+  clip-path: polygon(0 70px, 50% 0, 100% 70px, 100% 100%, 0 100%);
+  margin-top: -70px;
 
   .section-header {
     font-family: poppins-bold, sans-serif;
     text-transform: uppercase;
-    padding-bottom: 50px;
     font-size: clamp(rem(24px), 5vw, rem(62px));
     z-index: 2;
     color: $clr1;
     background: transparent;
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 17vw;
     width: 50vw;
   }
   .skills-container {
-    width: 100vw;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 900px;
+    width: 100%;
+    margin: 30px auto 0;
+
     @include for-normal-layout {
-      max-width: 760px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    @include for-mobile-layout {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
 
 .skill-container {
+  margin: 20px;
+
+  @include for-normal-layout {
+    margin: 30px;
+  }
   svg {
     height: 40px;
+    opacity: 1;
+    transition: opacity 0.1s linear;
+
+    &:hover {
+      opacity: 1;
+    }
 
     @include for-normal-layout {
-      height: 50px;
+      height: 60px;
+      opacity: 0.4;
     }
   }
 }
