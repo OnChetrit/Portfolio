@@ -17,6 +17,55 @@
     fill: #f4f7fe;
   }
 }
+section {
+  position: relative;
+  overflow: hidden;
+
+  .infinite-text {
+    z-index: 2;
+    width: 100%;
+
+    div {
+      color: $clr1;
+      background-color: $clr2;
+      font-family: poppins-bold, sans-serif;
+      // font-size: rem(42px);
+      font-size: clamp(rem(32px), 4vw, rem(64px));
+      white-space: nowrap;
+      text-transform: uppercase;
+      animation: animate 60s linear infinite;
+      animation-delay: -60s;
+
+      &:nth-child(2) {
+        animation: animate2 60s linear infinite;
+        animation-delay: -30s;
+      }
+
+      span {
+        -webkit-text-stroke: 2px $clr1;
+        color: transparent;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
 .project-list {
   z-index: 2;
   background: $clr2;
@@ -31,18 +80,6 @@
     background: $clr1;
   }
 
-  .section-header {
-    font-family: $font-sb;
-    padding-bottom: 50px;
-    font-size: clamp(rem(24px), 5vw, rem(48px));
-    z-index: 2;
-    color: $clr1;
-    background: transparent;
-    position: absolute;
-    top: -8vh;
-    left: 15vw;
-  }
-
   .project {
     flex-wrap: wrap;
     flex-direction: column;
@@ -55,7 +92,7 @@
     &:first-child {
       margin-top: 30px;
       @include for-normal-layout {
-        margin-top: 100px;
+        margin-top: 50px;
       }
     }
 

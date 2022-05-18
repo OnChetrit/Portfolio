@@ -2,10 +2,12 @@
   background: $clr2;
   z-index: 2;
   position: relative;
-  height: 200px;
+  height: 300px;
 
   .section-header {
-    font-family: $font-sb;
+    // font-family: $font-sb;
+    font-family: poppins-bold, sans-serif;
+    text-transform: uppercase;
     padding-bottom: 50px;
     font-size: clamp(rem(24px), 5vw, rem(62px));
     z-index: 2;
@@ -19,8 +21,8 @@
   .skills-container {
     width: 100vw;
     margin: 0 auto;
-    @include for-x-wide-layout {
-      max-width: 800px;
+    @include for-normal-layout {
+      max-width: 760px;
     }
   }
 }

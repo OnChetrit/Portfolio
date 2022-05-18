@@ -1,18 +1,18 @@
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import { ReactComponent as Css } from '../../assets/img/skills/css.svg';
-import { ReactComponent as Html } from '../../assets/img/skills/html5.svg';
-import { ReactComponent as Js } from '../../assets/img/skills/javascript.svg';
-import { ReactComponent as Jquery } from '../../assets/img/skills/jquery.svg';
-import { ReactComponent as NestJS } from '../../assets/img/skills/nestjs.svg';
-import { ReactComponent as MySQL } from '../../assets/img/skills/mysql.svg';
-import { ReactComponent as Mongodb } from '../../assets/img/skills/mongodb.svg';
-import { ReactComponent as Nodejs } from '../../assets/img/skills/node-js.svg';
-import { ReactComponent as Reactjs } from '../../assets/img/skills/react-js.svg';
-import { ReactComponent as Sass } from '../../assets/img/skills/sass.svg';
-import { ReactComponent as Typescript } from '../../assets/img/skills/typescript.svg';
+import { ReactComponent as Css } from "../../assets/img/skills/css.svg";
+import { ReactComponent as Html } from "../../assets/img/skills/html5.svg";
+import { ReactComponent as Js } from "../../assets/img/skills/javascript.svg";
+import { ReactComponent as Jquery } from "../../assets/img/skills/jquery.svg";
+import { ReactComponent as NestJS } from "../../assets/img/skills/nestjs.svg";
+import { ReactComponent as MySQL } from "../../assets/img/skills/mysql.svg";
+import { ReactComponent as Mongodb } from "../../assets/img/skills/mongodb.svg";
+import { ReactComponent as Nodejs } from "../../assets/img/skills/node-js.svg";
+import { ReactComponent as Reactjs } from "../../assets/img/skills/react-js.svg";
+import { ReactComponent as Sass } from "../../assets/img/skills/sass.svg";
+import { ReactComponent as Typescript } from "../../assets/img/skills/typescript.svg";
 
 export const Skills = () => {
   const settings = {
@@ -27,23 +27,16 @@ export const Skills = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 960,
         settings: {
           slidesToShow: 6,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 960,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
         breakpoint: 480,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 5,
           slidesToScroll: 1,
         },
       },
