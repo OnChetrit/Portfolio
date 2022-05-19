@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { ReactComponent as Css } from "../../assets/img/skills/css.svg";
 import { ReactComponent as Html } from "../../assets/img/skills/html5.svg";
 import { ReactComponent as Js } from "../../assets/img/skills/javascript.svg";
-import { ReactComponent as Jquery } from "../../assets/img/skills/jquery.svg";
+import { ReactComponent as Bootstrap } from "../../assets/img/skills/bootstrap-5.svg";
 import { ReactComponent as NestJS } from "../../assets/img/skills/nestjs.svg";
 import { ReactComponent as MySQL } from "../../assets/img/skills/mysql.svg";
 import { ReactComponent as Mongodb } from "../../assets/img/skills/mongodb.svg";
@@ -63,9 +63,9 @@ export const Skills = () => {
           <div className="skill-container">
             <Typescript />
           </div>
-          <div className="skill-container">
-            <Jquery />
-          </div>
+          {/* <div className="skill-container">
+            <Bootstrap />
+          </div> */}
           <div className="skill-container">
             <Mongodb />
           </div>

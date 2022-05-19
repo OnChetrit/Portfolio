@@ -1,13 +1,23 @@
 .about {
   position: relative;
-  padding: 30px 25px 150px;
+  padding: 10px 25px 130px;
   flex-wrap: wrap;
   gap: 100px;
   background: $clr1;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 70px), 0 100%);
+  min-height: calc(100vh - 80px);
+  z-index: 5;
+  // clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 30px), 0 100%);
+
+  @include for-normal-layout {
+    // clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 70px), 0 100%);
+    padding: 10px 25px 90px;
+    padding: 0px 25px 80px;
+  }
 
   .top {
+    max-width: 960px;
     flex-direction: column;
+
     @include for-normal-layout {
       gap: 20px;
       flex-direction: row;
@@ -42,9 +52,11 @@
     .right {
       .photo {
         position: relative;
-        max-width: 400px;
-        // left: 50%;
-        // bottom: 5%;
+        max-width: 300px;
+
+        @include for-normal-layout {
+          max-width: 400px;
+        }
 
         img {
           opacity: 0.4;

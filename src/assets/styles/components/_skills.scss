@@ -3,42 +3,44 @@
   z-index: 2;
   position: relative;
   height: 500px;
-  clip-path: polygon(0 70px, 50% 0, 100% 70px, 100% 100%, 0 100%);
-  margin-top: -70px;
+  min-height: calc(100vh - 80px);
+  position: sticky;
+  bottom: 0;
 
   .section-header {
     font-family: poppins-bold, sans-serif;
     text-transform: uppercase;
-    font-size: clamp(rem(24px), 5vw, rem(62px));
+    font-size: clamp(rem(42px), 5vw, rem(62px));
     z-index: 2;
     color: $clr1;
     background: transparent;
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 17vw;
     width: 50vw;
   }
   .skills-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    max-width: 900px;
+    max-width: 400px;
     width: 100%;
     margin: 30px auto 0;
 
     @include for-normal-layout {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      max-width: 900px;
     }
-    @include for-mobile-layout {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+    // @include for-mobile-layout {
+    //   grid-template-columns: 1fr 1fr 1fr;
+    // }
   }
 }
 
 .skill-container {
-  margin: 20px;
+  margin: 20px 0;
 
   @include for-normal-layout {
-    margin: 30px;
+    margin: 30px 0;
   }
   svg {
     height: 40px;

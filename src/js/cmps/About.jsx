@@ -1,7 +1,7 @@
-import on from '../../assets/img/on.png';
-import { motion } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
-import { Social } from './Social';
+import on from "../../assets/img/on.png";
+import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
+import { Social } from "./Social";
 
 const container = {
   show: {
@@ -15,7 +15,7 @@ const item = {
 
 export const About = () => {
   return (
-    <section id="about" className="about">
+    <section id="about" className="about flex align-center">
       <div className="top flex justify-center main-container">
         <motion.div
           className="left"
@@ -41,35 +41,33 @@ export const About = () => {
           </motion.div>
         </motion.div>
         <div className="right flex auto-center">
-          <div className="photo" variants={item}>
-            <Tilt
+          <motion.div className="photo" variants={item}>
+            {/* <Tilt
               trackOnWindow={true}
               transitionSpeed={3000}
               tiltReverse={true}
               scale={1.05}
-            >
-              <img src={on} alt="" />
-              <div className="circle flex auto-center">
-                <div className="logo"></div>
-                <div className="text">
-                  <p>
-                    {'Open To Work - Open To Work - '
-                      .split('')
-                      .map((char, i) => {
-                        return (
-                          <span
-                            key={i}
-                            style={{ transform: `rotate(${i * 12}deg)` }}
-                          >
-                            {char}
-                          </span>
-                        );
-                      })}
-                  </p>
-                </div>
+            > */}
+            <img src={on} alt="" />
+            <div className="circle flex auto-center">
+              <div className="logo"></div>
+              <div className="text">
+                <p>
+                  {"Open To Work - Open To Work - ".split("").map((char, i) => {
+                    return (
+                      <span
+                        key={i}
+                        style={{ transform: `rotate(${i * 12}deg)` }}
+                      >
+                        {char}
+                      </span>
+                    );
+                  })}
+                </p>
               </div>
-            </Tilt>
-          </div>
+            </div>
+            {/* </Tilt> */}
+          </motion.div>
         </div>
       </div>
     </section>

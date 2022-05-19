@@ -28,33 +28,35 @@ export const ProjectList = () => {
 
   return (
     <>
-      <section>
+      <section className="infinite-text-container">
         <div className="infinite-text flex">
           <div>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
+            {" "}
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
           </div>
           <div>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
+            {" "}
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
           </div>
-        </div>
+        </div>{" "}
         <div className="infinite-text flex">
           <div>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
           </div>
           <div>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
-            Projects -<span> Projects -</span>
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>
+            Projects ★ <span> Projects ★ </span>{" "}
           </div>
         </div>
       </section>
@@ -103,7 +105,7 @@ export const ProjectList = () => {
                   <div className="skills-used flex">
                     {madeWith.map((skill) => {
                       return (
-                        <Tilt perspective={500} key={skill} scale={1.3}>
+                        <Tilt perspective={500} key={skill} scale={1.15}>
                           <SVG skill={skill} />
                         </Tilt>
                       );
