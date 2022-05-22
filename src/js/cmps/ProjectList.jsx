@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
-import Tilt from "react-parallax-tilt";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useWindowSize } from "./hooks/useWindowSize";
+import { Link } from 'react-router-dom';
+import Tilt from 'react-parallax-tilt';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useWindowSize } from './hooks/useWindowSize';
 
-import { SVG } from "./dynamic/SVG";
-import { projects } from "../services/project.service";
+import { SVG } from './dynamic/SVG';
+import { projects } from '../services/project.service';
 
 export const ProjectList = () => {
   const size = useWindowSize();
@@ -28,23 +28,23 @@ export const ProjectList = () => {
 
   return (
     <>
-      <section className="infinite-text-container">
+      <section className="infinite-text-container" id="projects">
         <div className="infinite-text flex">
           <div>
-            {" "}
+            {' '}
             Projects ★ <span> Projects ★ </span>
             Projects ★ <span> Projects ★ </span>
             Projects ★ <span> Projects ★ </span>
             Projects ★ <span> Projects ★ </span>
           </div>
           <div>
-            {" "}
+            {' '}
             Projects ★ <span> Projects ★ </span>
             Projects ★ <span> Projects ★ </span>
             Projects ★ <span> Projects ★ </span>
             Projects ★ <span> Projects ★ </span>
           </div>
-        </div>{" "}
+        </div>{' '}
         <div className="infinite-text flex">
           <div>
             Projects ★ <span> Projects ★ </span>
@@ -56,7 +56,7 @@ export const ProjectList = () => {
             Projects ★ <span> Projects ★ </span>
             Projects ★ <span> Projects ★ </span>
             Projects ★ <span> Projects ★ </span>
-            Projects ★ <span> Projects ★ </span>{" "}
+            Projects ★ <span> Projects ★ </span>{' '}
           </div>
         </div>
       </section>
@@ -115,7 +115,7 @@ export const ProjectList = () => {
                 <div
                   className="slider"
                   style={{
-                    width: size.width > 960 ? size.width / 2 - 50 : "100%",
+                    width: size.width > 960 ? size.width / 2 - 50 : '100%',
                   }}
                 >
                   <Slider {...settings}>

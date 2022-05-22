@@ -15,12 +15,32 @@
     position: fixed;
     inset: 0;
     background-color: $clr1;
-    font-size: rem(28px);
+    font-size: rem(32px);
     font-family: $font-b;
     text-transform: capitalize;
     height: 100%;
-    gap: 60px;
     z-index: 10;
+    padding-left: 25px;
+
+    div {
+      margin-bottom: 10px;
+
+      a {
+        // text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .projects-title {
+      margin-bottom: 10px;
+      font-size: rem(18px);
+      padding-left: 50px;
+
+      a {
+        text-transform: initial;
+        letter-spacing: 2px;
+      }
+    }
   }
 }
 

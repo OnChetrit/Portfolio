@@ -3,37 +3,37 @@ import { AnimatePresence } from "framer-motion";
 
 import { Header } from "./js/cmps/Header";
 import { About } from "./js/cmps/About";
-import { Skills } from "./js/cmps/Skills";
 import { ProjectList } from "./js/cmps/ProjectList";
 import { Contact } from "./js/cmps/Contact";
 import { MenuModal } from "./js/cmps/MenuModal";
 
 import { useWindowSize } from "./js/cmps/hooks/useWindowSize";
-import { Skills2 } from "./js/cmps/Skills2";
+import { Skills } from "./js/cmps/Skills";
+import { Loader } from "./js/cmps/Loader";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [aboutHeight, setAboutHeight] = useState(0);
   const size = useWindowSize();
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    return () => {
-      clearTimeout(timeout);
-    };
-  });
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+  //   return () => {
+  //     clearTimeout(timeout);
+  //   };
+  // });
 
-  if (loading) return <div>Loadding</div>;
+  if (loading) return <Loader setLoading={setLoading} />;
   return (
     <div className="app flex column auto-center">
       <Header setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
       <main className="flex column">
         <section className="test">
-          <About />
-          {/* <Skills /> */}
-          <Skills2 />
+          <About setAboutHeight={setAboutHeight} />
+          <Skills />
         </section>
         <ProjectList />
         <Contact />
@@ -44,7 +44,7 @@ function App() {
           exitBeforeEnter={true}
           onExitComplete={() => null}
         >
-          {menuOpen && <MenuModal setMenuOpen={setMenuOpen} />}
+          {menuOpen && <MenuModal setMenuOpen={setMenuOpen} aboutHeight={aboutHeight} />}
         </AnimatePresence>
       )}
     </div>

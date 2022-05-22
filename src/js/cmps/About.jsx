@@ -1,7 +1,8 @@
-import on from "../../assets/img/on.png";
-import { motion } from "framer-motion";
-import Tilt from "react-parallax-tilt";
-import { Social } from "./Social";
+import on from '../../assets/img/on.png';
+import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
+import { Social } from './Social';
+import { useEffect, useRef } from 'react';
 
 const container = {
   show: {
@@ -18,9 +19,15 @@ const item = {
   show: { opacity: 1, y: 0 },
 };
 
-export const About = () => {
+export const About = ({ setAboutHeight }) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    setAboutHeight(ref.current.clientHeight);
+  });
+
   return (
-    <section id="about" className="about flex align-center">
+    <section id="about" className="about flex align-center" ref={ref}>
       <div className="top flex justify-center main-container">
         <motion.div
           className="left"
@@ -57,7 +64,7 @@ export const About = () => {
               <div className="logo"></div>
               <div className="text">
                 <p>
-                  {"Open To Work - Open To Work - ".split("").map((char, i) => {
+                  {'Open To Work - Open To Work - '.split('').map((char, i) => {
                     return (
                       <span
                         key={i}

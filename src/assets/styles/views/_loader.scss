@@ -3,7 +3,7 @@
   background: radial-gradient(circle, $clr1 0%, $clr2 0%);
   animation: pos 0s infinite;
   animation-duration: 4s, 2s;
-  animation-timing-function: steps(1), ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes pos {
