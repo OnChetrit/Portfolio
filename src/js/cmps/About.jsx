@@ -5,7 +5,12 @@ import { Social } from "./Social";
 
 const container = {
   show: {
-    transition: { staggerChildren: 0.4, delayChildren: 0.5 },
+    transition: { staggerChildren: 0.3, delayChildren: 0.5 },
+  },
+};
+const imageContainer = {
+  show: {
+    transition: { delayChildren: 2 },
   },
 };
 const item = {
@@ -40,15 +45,14 @@ export const About = () => {
             <Social />
           </motion.div>
         </motion.div>
-        <div className="right flex auto-center">
+        <motion.div
+          variants={imageContainer}
+          initial="hidden"
+          animate="show"
+          className="right flex auto-center"
+        >
           <motion.div className="photo" variants={item}>
-            {/* <Tilt
-              trackOnWindow={true}
-              transitionSpeed={3000}
-              tiltReverse={true}
-              scale={1.05}
-            > */}
-            <img src={on} alt="" />
+            <motion.img src={on} alt="" />
             <div className="circle flex auto-center">
               <div className="logo"></div>
               <div className="text">
@@ -66,9 +70,8 @@ export const About = () => {
                 </p>
               </div>
             </div>
-            {/* </Tilt> */}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,5 +1,20 @@
 export const projects = [
   {
+    title: "Looper App",
+    folder: "looper",
+    genre: "audio",
+    urlLive: "https://onchetrit.github.io/looper-app/",
+    urlGithub: "https://github.com/OnChetrit/looper-app",
+    thumbnails: [1],
+    desc: [
+      "This project use Web Audio API & Canvas API,",
+      "this app allows you to play with the audio files",
+      "I use web audio api so that I can play audio loops without gaps",
+      "adjust volume and make audio inActive",
+    ],
+    madeWith: ["reactjs", "javascript", "sass"],
+  },
+  {
     title: "Wednesday",
     folder: "wednesday",
     genre: "project management platform",

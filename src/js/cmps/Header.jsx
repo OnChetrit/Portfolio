@@ -1,9 +1,9 @@
-import { Link } from 'react-scroll';
-import { motion } from 'framer-motion';
-import cv from '../../assets/docs/on-chetrit-cv.pdf';
+import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import cv from "../../assets/docs/on-chetrit-cv.pdf";
 
-import { Menu } from './Menu';
-import { projects } from '../services/project.service';
+import { Menu } from "./Menu";
+import { projects } from "../services/project.service";
 
 export const Header = ({ setMenuOpen, menuOpen }) => {
   const variants = {
@@ -32,6 +32,8 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
     },
   };
 
+  const height = window.innerHeight;
+
   return (
     <header className="flex">
       <motion.nav
@@ -45,8 +47,18 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
 
         <motion.ul variants={variants} className="flex nav">
           <motion.li variants={itemVariants} className="tab">
-            <Link to="about" smooth={true} duration={1400}>
+            <Link to="about" smooth={true} duration={1400} offset="80px">
               About
+            </Link>
+          </motion.li>
+          <motion.li variants={itemVariants} className="tab">
+            <Link
+              to="about"
+              smooth={true}
+              duration={1400}
+              offset={height - 150}
+            >
+              Skills
             </Link>
           </motion.li>
           <motion.li variants={itemVariants} className="tab projects-hover">

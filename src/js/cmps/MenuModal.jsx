@@ -1,9 +1,9 @@
-import { Link } from 'react-scroll';
-import { motion } from 'framer-motion';
-import cv from '../../assets/docs/on-chetrit-cv.pdf';
+import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import cv from "../../assets/docs/on-chetrit-cv.pdf";
 
 const container = {
-  hidden: { y: '-100%' },
+  hidden: { y: "-100%" },
   show: {
     y: 0,
     transition: {
@@ -14,7 +14,7 @@ const container = {
     },
   },
   exit: {
-    y: '-100%',
+    y: "-100%",
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
       duration: 0.8,
@@ -25,7 +25,7 @@ const container = {
 
 const item = {
   hidden: {
-    x: '100vw',
+    x: "100vw",
     opacity: 0,
   },
   show: {
@@ -37,7 +37,7 @@ const item = {
     },
   },
   exit: {
-    x: '-100vw',
+    x: "-100vw",
     opacity: 0,
     transition: {
       duration: 0.5,
@@ -45,8 +45,10 @@ const item = {
   },
 };
 
+const height = window.innerHeight;
+
 export const MenuModal = ({ setMenuOpen }) => {
-  const links = ['about', 'contact'];
+  const links = ["about", "skills", "contact"];
   return (
     <motion.div
       className="menu-modal flex column auto-center"
@@ -59,8 +61,10 @@ export const MenuModal = ({ setMenuOpen }) => {
         return (
           <motion.div key={link} variants={item}>
             <Link
-              to={link}
-              offset={link === 'contact' ? 0 : -150}
+              to={link === "skills" ? "about" : link}
+              offset={
+                link === "contact" ? 0 : link === "skills" ? height - 150 : -150
+              }
               smooth={true}
               duration={1400}
               delay={1000}
