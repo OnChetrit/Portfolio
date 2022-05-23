@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Portfolio",
+  "name": "On Chetrit's Website",
+  "description": "This is portfolio made by On Chetrit.",
   "icons": [
     {
       "src": "favicon.ico",

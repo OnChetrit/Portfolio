@@ -12,8 +12,11 @@ import { ReactComponent as Sass } from '../../assets/img/skills/sass.svg';
 import { ReactComponent as Typescript } from '../../assets/img/skills/typescript.svg';
 
 export const Skills = () => {
-  const randomDelay = () => Math.floor(Math.random() * 30) + 3;
-  const randomDuration = () => Math.floor(Math.random() * 4) + 1;
+  let num = 0;
+  const delayNum = () => {
+    num += 0.3;
+    return num;
+  };
   return (
     <section id="skills" className="skills flex column justify-center">
       <h4 className="section-header main-container"> Skills .</h4>
@@ -21,96 +24,84 @@ export const Skills = () => {
         <div className="skill-container flex auto-center">
           <Html
             style={{
-              animationDuration: randomDuration() + 's',
-              animationDelay: randomDelay() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <Css
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <Sass
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <Bootstrap
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <Javascript
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <Typescript
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <React
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <Vue
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <Nodejs
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <NestJS
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <Mongodb
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
         <div className="skill-container flex auto-center">
           <MySQL
             style={{
-              animationDelay: randomDelay() + 's',
-              animationDuration: randomDuration() + 's',
+              animationDelay: delayNum() + 's',
             }}
           />
         </div>
