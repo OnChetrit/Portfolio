@@ -203,9 +203,20 @@
         max-width: 600px;
       }
 
+      &:hover {
+        .slick-prev,
+        .slick-next {
+          &:before {
+            display: block;
+            color: $clr1;
+          }
+        }
+      }
       .slick-prev,
       .slick-next {
+        height: 100%;
         &:before {
+          display: none;
           color: $clr1;
         }
       }
@@ -231,6 +242,7 @@
           background: $clr1;
           color: $clr2;
           border-radius: 50%;
+
           span {
             position: absolute;
             bottom: 50%;
