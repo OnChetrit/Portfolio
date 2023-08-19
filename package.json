@@ -11,7 +11,6 @@
     "emailjs-com": "^3.2.0",
     "framer-motion": "^4.1.17",
     "fullpage.js": "^3.1.2",
-    "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-parallax-tilt": "^1.5.90",
@@ -19,6 +18,7 @@
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.4",
     "react-slick": "^0.28.1",
+    "sass": "^1.66.1",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^1.1.2"
   },

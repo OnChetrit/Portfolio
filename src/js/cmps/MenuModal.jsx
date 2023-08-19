@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
-import cv from '../../assets/docs/on-chetrit-cv.pdf';
+import cv from '../../assets/docs/On-Chetrit-Resume.pdf';
 import { projects } from '../services/project.service';
 
 const container = {
@@ -52,11 +52,11 @@ export const MenuModal = ({ setMenuOpen, aboutHeight }) => {
 
   return (
     <motion.div
-      className="menu-modal flex column justify-center"
+      className='menu-modal flex column justify-center'
       variants={container}
-      initial="hidden"
-      animate="show"
-      exit="exit"
+      initial='hidden'
+      animate='show'
+      exit='exit'
     >
       {links.map((link) => {
         return (
@@ -67,13 +67,7 @@ export const MenuModal = ({ setMenuOpen, aboutHeight }) => {
           >
             <Link
               to={link === 'skills' ? 'about' : link}
-              offset={
-                link === 'contact'
-                  ? 0
-                  : link === 'skills'
-                  ? aboutHeight - 80
-                  : -80
-              }
+              offset={link === 'contact' ? 0 : link === 'skills' ? aboutHeight - 80 : -80}
               smooth={true}
               isDynamic={true}
               duration={1400}
@@ -87,9 +81,9 @@ export const MenuModal = ({ setMenuOpen, aboutHeight }) => {
           </motion.div>
         );
       })}
-      <motion.div variants={item} className="tab container-button">
-        <button className="btn-br modal">
-          <a href={cv} download="on-chetrit-cv">
+      <motion.div variants={item} className='tab container-button'>
+        <button className='btn-br modal'>
+          <a href={cv} download='on-chetrit-cv'>
             Download CV
           </a>
         </button>

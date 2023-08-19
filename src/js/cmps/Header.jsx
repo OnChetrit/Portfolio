@@ -1,6 +1,6 @@
 import { Link, animateScroll } from 'react-scroll';
 import { motion } from 'framer-motion';
-import cv from '../../assets/docs/on-chetrit-cv.pdf';
+import cv from '../../assets/docs/On-Chetrit-Resume.pdf';
 
 import { Menu } from './Menu';
 import { projects } from '../services/project.service';
@@ -36,56 +36,53 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
   let scroll = animateScroll;
 
   return (
-    <header className="flex">
-      <motion.nav
-        variants={variants}
-        className="flex align-center space-between"
-      >
+    <header className='flex'>
+      <motion.nav variants={variants} className='flex align-center space-between'>
         <span>On Chetrit</span>
-        <div className="burger-menu">
+        <div className='burger-menu'>
           <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
         </div>
 
-        <motion.ul variants={variants} className="flex nav">
-          <motion.li variants={itemVariants} className="tab">
+        <motion.ul variants={variants} className='flex nav'>
+          <motion.li variants={itemVariants} className='tab'>
             <Link
               onClick={() => scroll.scrollToTop()}
-              to="about"
+              to='about'
               spy={true}
               smooth={true}
               duration={1400}
               offset={-80}
-              activeClass="active"
+              activeClass='active'
             >
               About
             </Link>
           </motion.li>
-          <motion.li variants={itemVariants} className="tab">
+          <motion.li variants={itemVariants} className='tab'>
             <Link
               spy={true}
-              to="about"
+              to='about'
               smooth={true}
               duration={1400}
               offset={height - 160}
-              activeClass="active"
+              activeClass='active'
             >
               Skills
             </Link>
           </motion.li>
-          <motion.li variants={itemVariants} className="tab projects-hover">
-            <div className="projects flex align-center">Projects</div>
-            <div className="dropdown-container">
-              <ul className="dropdown flex">
+          <motion.li variants={itemVariants} className='tab projects-hover'>
+            <div className='projects flex align-center'>Projects</div>
+            <div className='dropdown-container'>
+              <ul className='dropdown flex'>
                 {projects.map(({ title }) => {
                   return (
-                    <li className="tab flex align-center" key={title}>
+                    <li className='tab flex align-center' key={title}>
                       <Link
                         spy={true}
                         to={title}
                         offset={-80}
                         smooth={true}
                         duration={1400}
-                        activeClass="active"
+                        activeClass='active'
                       >
                         {title}
                       </Link>
@@ -95,19 +92,13 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
               </ul>
             </div>
           </motion.li>
-          <motion.li variants={itemVariants} className="tab">
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              duration={1400}
-              activeClass="active"
-            >
+          <motion.li variants={itemVariants} className='tab'>
+            <Link to='contact' spy={true} smooth={true} duration={1400} activeClass='active'>
               Contact
             </Link>
           </motion.li>
-          <motion.div className="tab container-button">
-            <a href={cv} download="on-chetrit-cv" className="btn-br">
+          <motion.div className='tab container-button'>
+            <a href={cv} download='on-chetrit-cv' className='btn-br'>
               Download CV
             </a>
           </motion.div>

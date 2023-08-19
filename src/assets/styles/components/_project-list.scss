@@ -19,6 +19,8 @@
 }
 .infinite-text-container {
   position: relative;
+  background-color: #f4f7fe;
+  overflow: hidden;
 
   .infinite-text {
     transform: skewY(357deg) translateY(-5px);
@@ -203,6 +205,12 @@
         max-width: 600px;
       }
 
+      .slick-list {
+        @include for-wide-layout {
+          border-radius: 20px;
+        }
+      }
+
       &:hover {
         .slick-prev,
         .slick-next {
@@ -228,7 +236,6 @@
         position: relative;
 
         img {
-          aspect-ratio: 4/3;
           object-fit: cover;
         }
 
