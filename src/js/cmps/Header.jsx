@@ -1,6 +1,6 @@
 import { Link, animateScroll } from 'react-scroll';
 import { motion } from 'framer-motion';
-import cv from '../../assets/docs/On-Chetrit-Resume.pdf';
+import cv from '../../assets/docs/On-Chetrit-CV.pdf';
 
 import { Menu } from './Menu';
 import { projects } from '../services/project.service';
