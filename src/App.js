@@ -14,6 +14,7 @@ import { Loader } from './js/cmps/Loader';
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+
   const [aboutHeight, setAboutHeight] = useState(0);
 
   const size = useWindowSize();
