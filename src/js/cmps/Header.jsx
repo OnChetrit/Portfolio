@@ -1,4 +1,4 @@
-import { Link, animateScroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import cv from '../../assets/docs/On-Chetrit-CV.pdf';
 
@@ -33,12 +33,11 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
   };
 
   const height = window.innerHeight;
-  let scroll = animateScroll;
 
   return (
     <header className='flex'>
       <motion.nav variants={variants} className='flex align-center space-between'>
-        <span>On Chetrit</span>
+        <span className='logo'>On Chetrit</span>
         <div className='burger-menu'>
           <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
         </div>
@@ -46,10 +45,9 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
         <motion.ul variants={variants} className='flex nav'>
           <motion.li variants={itemVariants} className='tab'>
             <Link
-              onClick={() => scroll.scrollToTop()}
               to='about'
-              spy={true}
-              smooth={true}
+              // spy={true}
+              // smooth={true}
               duration={1400}
               offset={-80}
               activeClass='active'
@@ -59,9 +57,9 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
           </motion.li>
           <motion.li variants={itemVariants} className='tab'>
             <Link
-              spy={true}
+              // spy={true}
               to='about'
-              smooth={true}
+              // smooth={true}
               duration={1400}
               offset={height - 160}
               activeClass='active'
@@ -77,10 +75,10 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
                   return (
                     <li className='tab flex align-center' key={title}>
                       <Link
-                        spy={true}
+                        // spy={true}
                         to={title}
                         offset={-80}
-                        smooth={true}
+                        // smooth={true}
                         duration={1400}
                         activeClass='active'
                       >
@@ -93,7 +91,7 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
             </div>
           </motion.li>
           <motion.li variants={itemVariants} className='tab'>
-            <Link to='contact' spy={true} smooth={true} duration={1400} activeClass='active'>
+            <Link to='contact' duration={1400} activeClass='active'>
               Contact
             </Link>
           </motion.li>

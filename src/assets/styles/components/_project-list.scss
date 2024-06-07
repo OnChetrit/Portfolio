@@ -1,22 +1,3 @@
-.custom-shape-divider-bottom {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-
-  svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 221px;
-  }
-  .shape-fill {
-    fill: #f4f7fe;
-  }
-}
 .infinite-text-container {
   position: relative;
   background-color: #f4f7fe;
@@ -27,9 +8,10 @@
     z-index: 2;
     width: 100%;
     background: inherit;
+    // font-family: $montserrat;
 
     &:nth-child(2) {
-      div {
+      .line {
         animation: animate3 80s linear infinite;
         animation-delay: -80s;
 
@@ -40,10 +22,11 @@
       }
     }
 
-    div {
+    .line {
       color: $clr1;
       background-color: $clr2;
-      font-family: poppins-bold, sans-serif;
+      font-weight: bold;
+      // font-family: poppins-bold, sans-serif;
       font-size: clamp(rem(32px), 4vw, rem(64px));
       white-space: nowrap;
       text-transform: uppercase;
@@ -58,6 +41,7 @@
       span {
         -webkit-text-stroke: 1.5px $clr1;
         color: transparent;
+        font-weight: inherit;
       }
     }
   }
@@ -115,10 +99,14 @@
     flex-wrap: wrap;
     flex-direction: column;
     gap: 40px;
+    min-height: calc(100dvh - 80px);
+    align-items: center;
+    justify-content: center;
+
     color: $clr4;
-    background: $clr2;
+    // background: $clr2;
     padding-bottom: 200px;
-    padding: 20px 0 80px;
+    padding: 20px 0 130px;
 
     &:first-child {
       margin-top: 30px;
@@ -137,10 +125,11 @@
     }
 
     .project-info {
-      flex: 1;
       padding: 20px;
+      align-items: flex-start;
 
       @include for-wide-layout {
+        flex: 3;
         padding: 0;
       }
 
@@ -149,14 +138,16 @@
         margin-bottom: 5px;
       }
       h2 {
-        font-family: $font-b;
+        font-weight: 700;
         margin-bottom: 20px;
         font-size: clamp(rem(24px), 2vw, rem(32px));
       }
 
       .desc {
         font-size: clamp(rem(16px), 2.5vw, rem(18px));
-        flex: 1;
+        @include for-wide-layout {
+          flex: 1;
+        }
       }
 
       .skills-used {
@@ -173,7 +164,7 @@
       }
 
       .project-actions {
-        max-width: 160px;
+        gap: 0.5rem;
         margin-top: 20px;
 
         .action {
@@ -197,66 +188,52 @@
       }
     }
 
-    .slider {
+    .gallery {
       width: 100%;
       max-width: 960px;
+      position: relative;
+      flex: 4;
 
-      @include for-wide-layout {
-        max-width: 600px;
-      }
-
-      .slick-list {
-        @include for-wide-layout {
-          border-radius: 20px;
-        }
-      }
-
-      &:hover {
-        .slick-prev,
-        .slick-next {
-          &:before {
-            display: block;
-            color: $clr1;
-          }
-        }
-      }
-      .slick-prev,
-      .slick-next {
-        height: 100%;
-        &:before {
-          display: none;
-          color: $clr1;
-        }
-      }
-
-      .thumbnail {
-        outline: none;
-        width: 100%;
-        height: 100%;
+      > .image-container {
         position: relative;
+        overflow: hidden;
+        display: flex;
 
-        img {
+        > img {
+          width: 100%;
+          height: 100%;
           object-fit: cover;
-        }
+          transition: scale 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
 
-        .count {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 90px;
-          height: 90px;
-          transform: translate(30px, 30px);
-          background: $clr1;
-          color: $clr2;
-          border-radius: 50%;
-
-          span {
-            position: absolute;
-            bottom: 50%;
-            right: 50%;
+          &:hover {
+            scale: 1.05;
           }
         }
+
+        &:has(.mobile-image) {
+          border-radius: 10px;
+          border: 3px solid $clr2;
+          position: absolute;
+          height: 80%;
+          object-fit: contain;
+          width: unset;
+          translate: 25% 60%;
+          left: 0;
+          z-index: 2;
+        }
       }
+
+      .mobile-image {
+        height: 100%;
+      }
+      .desktop-image {
+      }
+    }
+
+    &:nth-child(2n) .gallery .image-container:has(.mobile-image) {
+      right: 0;
+      left: unset;
+      translate: -25% 60%;
     }
   }
 }

@@ -1,13 +1,15 @@
 .contact {
   color: $clr2;
   width: 100%;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   background-color: $clr1;
   padding: 50px 0;
   position: relative;
+  display: flex;
+  align-items: center;
 
   @include for-normal-layout {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
   }
 
   ::-moz-selection {
@@ -20,11 +22,9 @@
   }
 
   .container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
+    // position: fixed;
     width: 100%;
-    transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
     gap: 100px;
     text-align: center;
 
@@ -36,12 +36,12 @@
 
       h3 {
         font-size: clamp(rem(40px), 5vw, rem(72px));
-        font-family: $font-b;
+        font-weight: 700;
         padding-bottom: 40px;
       }
 
       button {
-        font-family: $font-sb;
+        font-weight: 500;
         font-size: clamp(rem(18px), 5vw, rem(36px));
         color: $clr1;
         background: $clr2;

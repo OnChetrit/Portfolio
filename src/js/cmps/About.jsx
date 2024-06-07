@@ -1,78 +1,75 @@
-import on from '../../assets/img/on.png';
+import on from '../../assets/img/on.webp';
 import { motion } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
 import { Social } from './Social';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
-const container = {
-  show: {
-    transition: { staggerChildren: 0.3, delayChildren: 0.5 },
-  },
-};
-const imageContainer = {
-  show: {
-    transition: { delayChildren: 2 },
-  },
-};
-const item = {
-  hidden: { opacity: 0, y: -20 },
-  show: { opacity: 1, y: 0 },
-};
+gsap.registerPlugin(ScrollTrigger);
+
+// const container = {
+//   show: {
+//     transition: { staggerChildren: 0.3, delayChildren: 0.4 },
+//   },
+// };
+// const imageContainer = {
+//   show: {
+//     transition: { delayChildren: 1.5 },
+//   },
+// };
+// const item = {
+//   hidden: { opacity: 0, y: -20 },
+//   show: { opacity: 1, y: 0 },
+// };
 
 export const About = ({ setAboutHeight }) => {
-  const ref = useRef(null);
+  const container = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.to(container.current, {
+        scrollTrigger: {
+          trigger: container.current,
+          start: 'bottom bottom',
+          end: 'bottom top',
+          scrub: 1,
+          pin: true,
+        },
+      });
+    },
+    {
+      scope: container,
+    }
+  );
 
   useEffect(() => {
-    setAboutHeight(ref.current.clientHeight);
+    setAboutHeight(container.current.clientHeight);
   });
 
   return (
-    <section id='about' className='about flex align-center' ref={ref}>
-      <div className='top flex justify-center main-container'>
-        <motion.div className='left' variants={container} initial='hidden' animate='show'>
-          <motion.h3 variants={item}>Hi! I'm On Chetrit</motion.h3>
-          <motion.h1 variants={item}>Full-Stack Web Developer</motion.h1>
-          <motion.p variants={item}>
-            Well-qualified Full Stack Developer familiar with wide range of programming utilities
-            and languages. Knowledgeable of backend and frontend development requirements.
-          </motion.p>
-          <motion.p variants={item}>
-            Handle any part of process with ease. Collaborative team player with excellent technical
-            abilities, hard worker, focusing on problem solving. self-learner and adapt quickly to
-            new environments.
-          </motion.p>
-          <motion.div className='social flex align-center' variants={item}>
-            <span>Find me Here </span>
-            <Social />
-          </motion.div>
-        </motion.div>
-        <motion.div
-          variants={imageContainer}
-          initial='hidden'
-          animate='show'
-          className='right flex auto-center'
-        >
-          <motion.div className='photo' variants={item}>
-            <motion.img src={on} alt='' />
-            <div className='circle flex auto-center'>
-              <div className='logo'></div>
-              {/* <div className="text">
-                <p>
-                  {'Open To Work - Open To Work - '.split('').map((char, i) => {
-                    return (
-                      <span
-                        key={i}
-                        style={{ transform: `rotate(${i * 12}deg)` }}
-                      >
-                        {char}
-                      </span>
-                    );
-                  })}
-                </p>
-              </div> */}
-            </div>
-          </motion.div>
-        </motion.div>
+    <section
+      id='about'
+      className='about flex align-center justify-center main-container'
+      ref={container}
+      data-speed='1.1'
+    >
+      <div className='left'>
+        <h3>Hi! I'm On Chetrit</h3>
+        <h1>Front End Developer</h1>
+        <p>
+          focused on CSS and its vast ecosystem. Dedicated to designing stunning, responsive web
+          interfaces that excel in both aesthetics and performance.
+        </p>
+        <div className='social flex align-center'>
+          <span>Find me Here </span>
+          <Social />
+        </div>
+      </div>
+      <div className='right flex auto-center'>
+        <div className='photo'>
+          <img src={on} alt='' />
+        </div>
       </div>
     </section>
   );

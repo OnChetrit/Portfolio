@@ -1,24 +1,23 @@
 // Setup
-@import "setup/typography.scss";
-@import "setup/variables.scss";
-@import "setup/functions.scss";
-@import "setup/mixins.scss";
+@import 'setup/variables.scss';
+@import 'setup/functions.scss';
+@import 'setup/mixins.scss';
 
 // Basics
-@import "basics/helpers.scss";
-@import "basics/layout.scss";
-@import "basics/base.scss";
-@import "basics/buttons.scss";
+@import 'basics/helpers.scss';
+@import 'basics/layout.scss';
+@import 'basics/base.scss';
+@import 'basics/buttons.scss';
 
 // Views
-@import "views/loader.scss";
-@import "views/main.scss";
+@import 'views/loader.scss';
+@import 'views/main.scss';
 
 // Components
-@import "components/menu.scss";
-@import "components/header.scss";
-@import "components/about.scss";
-@import "components/project-list.scss";
-@import "components/skills.scss";
-@import "components/contact.scss";
-@import "components/divider.scss";
+@import 'components/menu.scss';
+@import 'components/header.scss';
+@import 'components/about.scss';
+@import 'components/project-list.scss';
+@import 'components/skills.scss';
+@import 'components/contact.scss';
+@import 'components/divider.scss';

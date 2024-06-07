@@ -6,7 +6,7 @@
   main {
     width: 100%;
     position: relative;
-    background: $clr2;
+    background: $clr1;
     > section:not(:last-child) {
       z-index: 5;
     }
@@ -16,14 +16,14 @@
     inset: 0;
     background-color: $clr1;
     font-size: rem(32px);
-    font-family: $font-b;
+    font-weight: 700;
     text-transform: capitalize;
     height: 100%;
     z-index: 10;
     padding-left: 25px;
 
     div {
-      margin-bottom: 10px;
+      margin-bottom: 18px;
 
       a {
         // text-transform: uppercase;
@@ -32,7 +32,7 @@
     }
 
     .projects-title {
-      margin-bottom: 10px;
+      margin-bottom: 18px;
       font-size: rem(18px);
       padding-left: 50px;
 
