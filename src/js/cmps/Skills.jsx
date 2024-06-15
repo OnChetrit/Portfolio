@@ -11,32 +11,66 @@ import { ReactComponent as Vue } from '../../assets/img/skills/vue-js.svg';
 import { ReactComponent as Graphql } from '../../assets/img/skills/graphql.svg';
 import { ReactComponent as Nodejs } from '../../assets/img/skills/node-js.svg';
 import { ReactComponent as NestJS } from '../../assets/img/skills/nestjs.svg';
+import { ReactComponent as Gsap } from '../../assets/img/skills/gsap.svg';
+import { ReactComponent as Apollo } from '../../assets/img/skills/apollo.svg';
+import { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const skills = {
   html: Html,
   css: Css,
   sass: Sass,
   tailwind: Tailwind,
+  gsap: Gsap,
   bootstrap: Bootstrap,
   javascript: Javascript,
   typescript: Typescript,
   react: React,
   nextjs: NextJS,
   vue: Vue,
+  apollo: Apollo,
   graphql: Graphql,
   nodejs: Nodejs,
   nestjs: NestJS,
 };
+
 export const Skills = () => {
+  const container = useRef();
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        '.skill',
+        {
+          opacity: 0,
+          scale: 1.3,
+          // y: '-=100%',
+          stagger: {
+            each: 0.2,
+          },
+        },
+        {
+          opacity: 1,
+          stagger: 0.2,
+          scale: 1,
+          scrollTrigger: {
+            trigger: '.skill',
+            start: 'bottom bottom-=150px',
+            end: 'center top',
+            scrub: 1,
+            // pin: true,
+          },
+        }
+      );
+    },
+    { scope: container }
+  );
+
   const skillsList = Object.keys(skills).map((key, index) => {
     const Component = skills[key];
     return (
-      <div
-        className='skill flex auto-center'
-        style={{
-          animationTimeline: `view(block ${70}% ${20}%)`,
-        }}
-      >
+      <div className='skill flex auto-center' key={key}>
         <Component />
       </div>
     );
@@ -47,7 +81,9 @@ export const Skills = () => {
       <div className='header'>
         <h4 className='skills-title'> Skills .</h4>
       </div>
-      <ul className='skills-list'>{skillsList}</ul>
+      <ul className='skills-list' ref={container}>
+        {skillsList}
+      </ul>
     </section>
   );
 };

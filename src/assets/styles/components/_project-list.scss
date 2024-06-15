@@ -151,8 +151,9 @@
       }
 
       .skills-used {
-        gap: 25px;
+        gap: 1.125rem;
         margin-top: 20px;
+        flex-wrap: wrap;
 
         svg {
           height: 40px;
@@ -227,6 +228,7 @@
         height: 100%;
       }
       .desktop-image {
+        aspect-ratio: 9/6;
       }
     }
 

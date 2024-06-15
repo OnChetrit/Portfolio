@@ -28,18 +28,6 @@
       position: relative;
       display: inline-block;
       width: fit-content;
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0.5rem;
-        border-radius: 50px;
-        background-color: $clr1;
-        opacity: 0.5;
-      }
     }
   }
 
@@ -68,8 +56,8 @@
         // animation: flicker 1.5s ease-in-out alternate 1;
 
         &:hover {
-          filter: drop-shadow(8px 8px 7px #cccccc) grayscale(0%);
-          transform: scale(1.15);
+          filter: drop-shadow(8px 8px 3px #cccccc) grayscale(0%);
+          transform: scale(1.05);
         }
 
         @include for-normal-layout {

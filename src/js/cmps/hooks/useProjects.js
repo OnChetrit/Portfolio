@@ -8,12 +8,43 @@ import touchNumbers_mobile from './projects/touchNumbers/mobile.webp';
 import touchNumbers_desktop from './projects/touchNumbers/desk.webp';
 import minesweeper_mobile from './projects/minesweeper/mobile.webp';
 import minesweeper_desktop from './projects/minesweeper/desk.webp';
+import alm_mobile from './projects/alm/mobile.webp';
+import alm_desktop from './projects/alm/desk.webp';
+import experis_mobile from './projects/experis/mobile.webp';
+import experis_desktop from './projects/experis/desk.webp';
 
 const useProjects = () => {
   const projects = [
     {
+      title: 'ALM',
+      genre: 'E commerce',
+      urlLive: 'https://alm.co.il/',
+      mobile_image: alm_mobile,
+      desktop_image: alm_desktop,
+      desc: `
+      <p>An E-commerce website I've created at CodeOasis. <br>
+      using Magento PWA's Venia template. <br>
+      I was responsible to implemented responsive, adaptive web designs and enhancing user experience.</p>
+      <p>Optimized page load times and site performance.</p>
+      `,
+      madeWith: ['reactjs', 'javascript', 'sass', 'tailwind', 'graphql'],
+    },
+    {
+      title: 'Experis',
+      genre: 'Jobs',
+      urlLive: 'https://www.experis.co.il/',
+      mobile_image: experis_mobile,
+      desktop_image: experis_desktop,
+      desc: `
+      <p>A Job finder for IT departments.<br>
+      Build with Next Js 13 and Typescript.<br>
+      .</p>
+      `,
+      madeWith: ['nextjs', 'typescript', 'sass', 'tailwind', 'graphql'],
+    },
+    {
       title: 'BlackJack',
-      genre: 'game',
+      genre: 'Game',
       urlLive: 'https://onchetrit.github.io/blackjack/',
       urlGithub: 'https://github.com/OnChetrit/blackjack',
       mobile_image: blackjack_mobile,
@@ -27,7 +58,7 @@ const useProjects = () => {
     },
     {
       title: 'Looper App',
-      genre: 'audio',
+      genre: 'Audio',
       urlLive: 'https://onchetrit.github.io/looper-app/',
       urlGithub: 'https://github.com/OnChetrit/looper-app',
       mobile_image: looper_mobile,
@@ -40,7 +71,7 @@ const useProjects = () => {
     },
     {
       title: 'Meme Generator',
-      genre: 'creative',
+      genre: 'Creative',
       urlLive: 'https://onchetrit.github.io/on-chetrit-meme-generator/',
       urlGithub: 'https://github.com/OnChetrit/on-chetrit-meme-generator',
       mobile_image: memeGenerator_mobile,
@@ -53,7 +84,7 @@ const useProjects = () => {
     },
     {
       title: 'Touch the numbers',
-      genre: 'game',
+      genre: 'Game',
       urlLive: 'https://onchetrit.github.io/TouchNums/',
       urlGithub: 'https://github.com/OnChetrit/TouchNums',
       mobile_image: touchNumbers_mobile,
@@ -66,7 +97,7 @@ const useProjects = () => {
     },
     {
       title: 'Minesweeper',
-      genre: 'game',
+      genre: 'Game',
       urlLive: 'https://onchetrit.github.io/MineSweeperOnChetrit/',
       urlGithub: 'https://github.com/OnChetrit/MineSweeperOnChetrit',
       mobile_image: minesweeper_mobile,

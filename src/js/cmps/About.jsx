@@ -2,17 +2,27 @@ import on from '../../assets/img/on.webp';
 import { Social } from './Social';
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export const About = ({ setAboutHeight }) => {
-  const container = useRef(null);
+  const container = useRef();
 
   useGSAP(
     () => {
+      gsap.from('.animate', {
+        opacity: 0,
+        delay: 0.5,
+        y: -10,
+        ease: 'power2.inOut',
+        stagger: {
+          each: 0.2,
+        },
+        autoAlpha: true,
+      });
+
       gsap.to(container.current, {
+        // y: '-=50%',
+        ease: 'none',
         scrollTrigger: {
           trigger: container.current,
           start: 'bottom bottom',
@@ -22,9 +32,7 @@ export const About = ({ setAboutHeight }) => {
         },
       });
     },
-    {
-      scope: container,
-    }
+    { scope: container }
   );
 
   useEffect(() => {
@@ -39,18 +47,18 @@ export const About = ({ setAboutHeight }) => {
       data-speed='1.1'
     >
       <div className='left'>
-        <h3>Hi! I'm On Chetrit</h3>
-        <h1>Front End Developer</h1>
-        <p>
+        <h3 className='animate'>Hi! I'm On Chetrit</h3>
+        <h1 className='animate'>Front End Developer</h1>
+        <p className='animate'>
           focused on CSS and its vast ecosystem. Dedicated to designing stunning, responsive web
           interfaces that excel in both aesthetics and performance.
         </p>
-        <div className='social flex align-center'>
+        <div className='social animate flex align-center'>
           <span>Find me Here </span>
           <Social />
         </div>
       </div>
-      <div className='right flex auto-center'>
+      <div className='animate right flex auto-center'>
         <div className='photo'>
           <img src={on} alt='' />
         </div>

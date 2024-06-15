@@ -28,7 +28,7 @@ const container = {
 const item = {
   hidden: {
     opacity: 0,
-    x: '100vw',
+    x: '40vw',
   },
   show: {
     x: 0,
@@ -39,7 +39,7 @@ const item = {
   },
   exit: {
     opacity: 0,
-    x: '-100vw',
+    x: '-40vw',
     transition: {
       duration: 0.5,
     },

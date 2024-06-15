@@ -6,9 +6,13 @@ import { About } from './js/cmps/About';
 import { ProjectList } from './js/cmps/ProjectList';
 import { Contact } from './js/cmps/Contact';
 import { MenuModal } from './js/cmps/MenuModal';
-
 import { useWindowSize } from './js/cmps/hooks/useWindowSize';
 import { Skills } from './js/cmps/Skills';
+
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
