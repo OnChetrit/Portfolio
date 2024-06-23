@@ -2,63 +2,51 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SVG } from './dynamic/SVG';
 import Tilt from 'react-parallax-tilt';
-import { useWindowSize } from './hooks/useWindowSize';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useRef } from 'react';
-import { getRatio } from '../services/utils';
 
-const Project = ({ project }) => {
-  const { title, genre, desc, madeWith, urlLive, urlGithub, mobile_image, desktop_image } = project;
-  const size = useWindowSize();
+const Project = ({ project, codeOasisLogoSrc }) => {
+  const {
+    title,
+    genre,
+    desc,
+    madeWith,
+    urlLive,
+    urlGithub,
+    codeOasis,
+    mobile_image,
+    desktop_image,
+  } = project;
   const containerRef = useRef();
   const desktopImageRef = useRef();
 
+  // Skills Reveals
   useGSAP(
     () => {
-      gsap.fromTo(
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top bottom-=100px',
+          end: 'center center',
+          toggleActions: 'play none none reset',
+        },
+      });
+      tl.from('h2, h5, .desc,.code-oasis-logo, .project-actions', {
+        opacity: 0,
+        y: -10,
+        ease: 'power2.inOut',
+        stagger: {
+          each: 0.2,
+        },
+      }).from(
         '.skill',
         {
           opacity: 0,
-        },
-        {
           stagger: 0.1,
-          opacity: 1,
-          scrollTrigger: {
-            trigger: '.skills-used',
-            start: 'bottom bottom-=100px',
-            end: 'center center',
-            // scrub: 1,
-          },
-        }
-      );
-    },
-    { scope: containerRef }
-  );
-
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        'h2, h5, .desc, .project-actions',
-        {
-          opacity: 0,
-          delay: 0.5,
-          y: -10,
-          ease: 'power2.inOut',
-          stagger: {
-            each: 0.2,
-          },
         },
-        {
-          stagger: 0.2,
-          opacity: 1,
-          scrollTrigger: {
-            trigger: '.project-info',
-            start: 'top bottom-=20%',
-            end: 'center center',
-            // scrub: 1,
-          },
-        }
+
+        '-=0.5'
       );
     },
     { scope: containerRef }
@@ -66,48 +54,31 @@ const Project = ({ project }) => {
 
   useGSAP(
     () => {
-      gsap.fromTo(
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.gallery',
+          start: 'center bottom-=200px',
+          end: 'bottom top',
+          toggleActions: 'play none none none',
+        },
+      });
+      tl.from(
         '.gallery',
         {
-          y: -10,
           opacity: 0,
+          duration: 0.5,
+          // stagger: 0.1,
         },
-        {
-          stagger: 0.1,
-          y: 0,
-          opacity: 1,
-          scrollTrigger: {
-            trigger: '.gallery',
-            start: 'center bottom-=20px',
-            end: 'center center',
-            // scrub: 1,
-          },
-        }
-      );
-    },
-    { scope: containerRef }
-  );
-
-  useGSAP(
-    () => {
-      gsap.fromTo(
+        0
+      ).from(
         '.mobile-image, .desktop-image',
         {
+          stagger: 0.1,
           scale: 1.1,
         },
-        {
-          stagger: 0.1,
-          scale: 1,
-          scrollTrigger: {
-            trigger: '.gallery',
-            start: 'center bottom-=20px',
-            end: 'center center',
-            // scrub: 1,
-          },
-        }
+        0
       );
     },
-
     { scope: containerRef }
   );
 
@@ -116,16 +87,15 @@ const Project = ({ project }) => {
       gsap.fromTo(
         '.image-container:has(.desktop-image)',
         {
-          y: () => '+=200',
+          y: '+=200',
         },
         {
-          y: () => '-=200',
+          y: '-=200',
           scrollTrigger: {
             trigger: '.image-container:has(.desktop-image)',
             start: 'top bottom',
             end: 'bottom top',
             scrub: true,
-            // invalidateOnRefresh: true,
           },
         }
       );
@@ -138,6 +108,12 @@ const Project = ({ project }) => {
       <div className='project-info flex column'>
         <h5>{genre}</h5>
         <h2>{title}</h2>
+        {codeOasis && (
+          <div className='code-oasis-logo flex'>
+            <span>As Part Of</span>
+            <img src={codeOasisLogoSrc} alt='code Oasis logo' title='code Oasis logo' />
+          </div>
+        )}
         <div className='desc'>
           <div dangerouslySetInnerHTML={{ __html: desc }} />
         </div>
@@ -163,12 +139,7 @@ const Project = ({ project }) => {
           })}
         </div>
       </div>
-      <div
-        className='gallery'
-        style={{
-          width: size.width > 960 ? size.width / 2 - 50 : '100%',
-        }}
-      >
+      <div className='gallery'>
         <div className='image-container'>
           <img className='mobile-image' src={mobile_image} alt='' loading='lazy' />
         </div>

@@ -12,6 +12,7 @@ import alm_mobile from './projects/alm/mobile.webp';
 import alm_desktop from './projects/alm/desk.webp';
 import experis_mobile from './projects/experis/mobile.webp';
 import experis_desktop from './projects/experis/desk.webp';
+import codeOasisLogo from './codeoasis-logo.png';
 
 const useProjects = () => {
   const projects = [
@@ -21,8 +22,9 @@ const useProjects = () => {
       urlLive: 'https://alm.co.il/',
       mobile_image: alm_mobile,
       desktop_image: alm_desktop,
+      codeOasis: true,
       desc: `
-      <p>An E-commerce website I've created at CodeOasis. <br>
+      <p>An E-commerce website.<br>
       using Magento PWA's Venia template. <br>
       I was responsible to implemented responsive, adaptive web designs and enhancing user experience.</p>
       <p>Optimized page load times and site performance.</p>
@@ -35,10 +37,10 @@ const useProjects = () => {
       urlLive: 'https://www.experis.co.il/',
       mobile_image: experis_mobile,
       desktop_image: experis_desktop,
+      codeOasis: true,
       desc: `
       <p>A Job finder for IT departments.<br>
-      Build with Next Js 13 and Typescript.<br>
-      .</p>
+      Build with Next Js 13 and Typescript.</p>
       `,
       madeWith: ['nextjs', 'typescript', 'sass', 'tailwind', 'graphql'],
     },
@@ -110,7 +112,9 @@ const useProjects = () => {
     },
   ];
 
-  return projects;
+  const codeOasisLogoSrc = codeOasisLogo;
+
+  return [projects, codeOasisLogoSrc];
 };
 
 export default useProjects;

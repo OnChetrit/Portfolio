@@ -11,7 +11,7 @@ import { ReactComponent as Logo } from '../../assets/img/logo.svg';
 
 export const Header = ({ setMenuOpen, menuOpen }) => {
   const container = useRef();
-  const projects = useProjects();
+  const [projects] = useProjects();
 
   useGSAP(
     () => {
@@ -73,7 +73,7 @@ export const Header = ({ setMenuOpen, menuOpen }) => {
             </Link>
           </motion.li>
           <motion.li variants={itemVariants} className='tab show'>
-            <Link to='about' duration={1400} offset={height - 160} activeClass='active'>
+            <Link to='skills' duration={1400} offset={-80} activeClass='active'>
               Skills
             </Link>
           </motion.li>

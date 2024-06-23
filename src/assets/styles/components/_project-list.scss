@@ -2,82 +2,32 @@
   position: relative;
   background-color: #f4f7fe;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-  .infinite-text {
-    // transform: skewY(357deg) translateY(-5px);
+  .infinite-text-left,
+  .infinite-text-right {
     z-index: 2;
     width: 100%;
     background: inherit;
-    // font-family: $montserrat;
+    color: $clr1;
+    background-color: $clr2;
+    font-weight: bold;
+    font-size: clamp(rem(32px), 4vw, rem(64px));
+    white-space: nowrap;
+    text-transform: uppercase;
+    gap: 0.5rem;
 
     &:nth-child(2) {
-      .line {
-        animation: animate3 80s linear infinite;
-        animation-delay: -80s;
-
-        &:nth-child(2) {
-          animation: animate4 80s linear infinite;
-          animation-delay: -40s;
-        }
-      }
+      direction: rtl;
     }
 
-    .line {
-      color: $clr1;
-      background-color: $clr2;
-      font-weight: bold;
-      // font-family: poppins-bold, sans-serif;
-      font-size: clamp(rem(32px), 4vw, rem(64px));
-      white-space: nowrap;
-      text-transform: uppercase;
-      animation: animate 80s linear infinite;
-      animation-delay: -80s;
-
-      &:nth-child(2) {
-        animation: animate2 80s linear infinite;
-        animation-delay: -40s;
-      }
-
-      span {
-        -webkit-text-stroke: 1.5px $clr1;
-        color: transparent;
-        font-weight: inherit;
-      }
+    span {
+      -webkit-text-stroke: 1.5px $clr1;
+      color: transparent;
+      font-weight: inherit;
     }
-  }
-}
-
-@keyframes animate {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes animate2 {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
-
-@keyframes animate3 {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-@keyframes animate4 {
-  0% {
-    transform: translateX(-200%);
-  }
-  100% {
-    transform: translateX(0%);
   }
 }
 
@@ -147,6 +97,20 @@
         font-size: clamp(rem(16px), 2.5vw, rem(18px));
         @include for-wide-layout {
           flex: 1;
+        }
+      }
+
+      .code-oasis-logo {
+        gap: 0.5rem;
+        align-items: center;
+        white-space: nowrap;
+
+        > img {
+          height: 40px;
+
+          @include for-normal-layout {
+            height: 50px;
+          }
         }
       }
 

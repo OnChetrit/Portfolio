@@ -47,19 +47,18 @@ export const Skills = () => {
           scale: 1.3,
           // y: '-=100%',
           stagger: {
-            each: 0.2,
+            each: 1.5,
           },
         },
         {
           opacity: 1,
-          stagger: 0.2,
+          stagger: 0.5,
           scale: 1,
           scrollTrigger: {
             trigger: '.skill',
             start: 'bottom bottom-=150px',
-            end: 'center top',
-            scrub: 1,
-            // pin: true,
+            end: 'center center-=100px',
+            scrub: 0.5,
           },
         }
       );
