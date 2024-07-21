@@ -71,19 +71,19 @@ const useProjects = () => {
       `,
       madeWith: ['reactjs', 'javascript', 'sass'],
     },
-    {
-      title: 'Meme Generator',
-      genre: 'Creative',
-      urlLive: 'https://onchetrit.github.io/on-chetrit-meme-generator/',
-      urlGithub: 'https://github.com/OnChetrit/on-chetrit-meme-generator',
-      mobile_image: memeGenerator_mobile,
-      desktop_image: memeGenerator_desktop,
-      desc: `
-      <p>Canvas-based meme generator allows for easy caption addition to your images or a vast collection of memes. Whether you're crafting your own meme or browsing through a library, this tool offers simplicity and creativity.</p>
-      <p>Save your customized meme or export it directly to your device for sharing with friends and family.</p>
-     `,
-      madeWith: ['javascript', 'html', 'css'],
-    },
+    // {
+    //   title: 'Meme Generator',
+    //   genre: 'Creative',
+    //   urlLive: 'https://onchetrit.github.io/on-chetrit-meme-generator/',
+    //   urlGithub: 'https://github.com/OnChetrit/on-chetrit-meme-generator',
+    //   mobile_image: memeGenerator_mobile,
+    //   desktop_image: memeGenerator_desktop,
+    //   desc: `
+    //   <p>Canvas-based meme generator allows for easy caption addition to your images or a vast collection of memes. Whether you're crafting your own meme or browsing through a library, this tool offers simplicity and creativity.</p>
+    //   <p>Save your customized meme or export it directly to your device for sharing with friends and family.</p>
+    //  `,
+    //   madeWith: ['javascript', 'html', 'css'],
+    // },
     {
       title: 'Touch the numbers',
       genre: 'Game',

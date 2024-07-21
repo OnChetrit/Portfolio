@@ -8,7 +8,6 @@ export const ProjectList = () => {
   const [projects, codeOasisLogoSrc] = useProjects();
   const containerRef = useRef();
 
-  console.log('codeOasisLogoSrc', codeOasisLogoSrc);
   useGSAP(
     () => {
       gsap.fromTo(

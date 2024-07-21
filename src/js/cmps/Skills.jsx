@@ -46,9 +46,9 @@ export const Skills = () => {
           opacity: 0,
           scale: 1.3,
           // y: '-=100%',
-          stagger: {
-            each: 1.5,
-          },
+          // stagger: {
+          //   each: 1.5,
+          // },
         },
         {
           opacity: 1,

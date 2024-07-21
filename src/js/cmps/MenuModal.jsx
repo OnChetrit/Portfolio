@@ -66,8 +66,10 @@ export const MenuModal = ({ setMenuOpen, aboutHeight }) => {
             className={projectsTitle.includes(link) ? 'projects-title' : ''}
           >
             <Link
-              to={link === 'skills' ? 'about' : link}
-              offset={link === 'contact' ? 0 : link === 'skills' ? aboutHeight - 80 : -80}
+              // to={link === 'skills' ? 'about' : link}
+              to={link}
+              // offset={link === 'contact' ? 0 : link === 'skills' ? aboutHeight - 80 : -80}
+              offset={-80}
               smooth={true}
               isDynamic={true}
               duration={1400}

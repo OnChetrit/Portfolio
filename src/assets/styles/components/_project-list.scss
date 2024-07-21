@@ -46,6 +46,7 @@
   }
 
   .project {
+    display: grid;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 40px;
@@ -54,12 +55,15 @@
     justify-content: center;
 
     color: $clr4;
-    // background: $clr2;
     padding-bottom: 200px;
     padding: 20px 0 130px;
 
+    @include for-normal-layout {
+      grid-template-columns: 3fr 4fr;
+    }
     &:first-child {
       margin-top: 30px;
+
       @include for-normal-layout {
         margin-top: 50px;
       }
@@ -70,7 +74,14 @@
       padding: 20px 30px 200px;
 
       &:nth-child(2n) {
-        flex-direction: row-reverse;
+        grid-template-columns: 4fr 3fr;
+        .project-info {
+          grid-column: 2;
+        }
+
+        .gallery {
+          grid-row: 1;
+        }
       }
     }
 
@@ -191,9 +202,9 @@
       .mobile-image {
         height: 100%;
       }
-      .desktop-image {
-        aspect-ratio: 9/6;
-      }
+      // .desktop-image {
+      //   aspect-ratio: 9/6;
+      // }
     }
 
     &:nth-child(2n) .gallery .image-container:has(.mobile-image) {

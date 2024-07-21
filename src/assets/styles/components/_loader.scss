@@ -1,0 +1,38 @@
+.loader {
+  background: white;
+  color: $clr1;
+  height: 100dvh;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(white 30%, transparent, white 70%);
+  }
+
+  .loader-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    translate: 0 50vh;
+    font-family: monospace;
+    font-size: clamp(3rem, 4.464vw + 5.229rem, 10rem);
+
+    span {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .cirle {
+    aspect-ratio: 1;
+    background: $clr1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 5;
+  }
+}

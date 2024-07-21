@@ -21,14 +21,12 @@ export const About = ({ setAboutHeight }) => {
       });
 
       gsap.to(container.current, {
-        // y: '-=50%',
-        ease: 'none',
         scrollTrigger: {
           trigger: container.current,
           start: 'bottom bottom',
           end: 'bottom top',
           scrub: 1,
-          pin: true,
+          // pin: true,
         },
       });
     },
@@ -44,7 +42,6 @@ export const About = ({ setAboutHeight }) => {
       id='about'
       className='about flex align-center justify-center main-container'
       ref={container}
-      data-speed='1.1'
     >
       <div className='left'>
         <h3 className='animate'>Hi! I'm On Chetrit</h3>
