@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.b6f6cc8a.css",
-    "main.js": "/portfolio/static/js/main.2bda98cc.js",
+    "main.js": "/portfolio/static/js/main.8a2a7d81.js",
     "static/media/desk.webp": "/portfolio/static/media/desk.291836c27c8cb94dd021.webp",
     "static/media/on.webp": "/portfolio/static/media/on.46f43d6410a1b73b146e.webp",
     "static/media/mobile.webp": "/portfolio/static/media/mobile.becddf7a0f86a14dd4cc.webp",
-    "static/media/On-Chetrit-CV.pdf": "/portfolio/static/media/On-Chetrit-CV.b3817cf425077560708f.pdf",
+    "static/media/On-Chetrit-CV.pdf": "/portfolio/static/media/On-Chetrit-CV.0006d00a203a1ed4d12b.pdf",
     "static/media/nestjs.svg": "/portfolio/static/media/nestjs.10dd45e3161745666ffcd99b535a0a30.svg",
     "index.html": "/portfolio/index.html",
     "static/media/rest-api.svg": "/portfolio/static/media/rest-api.4210f03d6c1b36f6ac345511b2d79d26.svg",
@@ -32,10 +32,10 @@
     "static/media/tailwind.svg": "/portfolio/static/media/tailwind.ce52daf0d5c46e1173daaa3774a945c1.svg",
     "static/media/logo.svg": "/portfolio/static/media/logo.d22e0d46050fb1f6a96cbab4bc20ea48.svg",
     "main.b6f6cc8a.css.map": "/portfolio/static/css/main.b6f6cc8a.css.map",
-    "main.2bda98cc.js.map": "/portfolio/static/js/main.2bda98cc.js.map"
+    "main.8a2a7d81.js.map": "/portfolio/static/js/main.8a2a7d81.js.map"
   },
   "entrypoints": [
     "static/css/main.b6f6cc8a.css",
-    "static/js/main.2bda98cc.js"
+    "static/js/main.8a2a7d81.js"
   ]
 }
